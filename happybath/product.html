@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: "Nanum Gothic", Arial, sans-serif;
+      }
+      .product {
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .product h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .product .rewiew {
+        position: relative;
+      }
+      .product .rewiew .box {
+        border: 1px solid#ccc;
+        display: flex;
+        justify-content: center;
+      }
+
+      .product .rewiew .box:hover {
+        border-color: #000;
+      }
+      .product .rewiew .box .picture {
+        background: #e8e2ef;
+      }
+      .product .rewiew .box .desc {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px;
+        box-sizing: border-box;
+        text-align: justify;
+      }
+      .product .rewiew .box .desc .star {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid#ccc;
+        padding-bottom: 10px;
+      }
+
+      .product .rewiew2 {
+        position: absolute;
+        left: 0;
+        top: 48px;
+        background: #fff;
+        animation: rewiew 4s infinite both linear alternate;
+      }
+      @keyframes rewiew {
+        0% {
+          opacity: 0%;
+        }
+        50% {
+          opacity: 100%;
+        }
+        100% {
+          opacity: 0%;
+        }
+      }
+      .product .news .box {
+        width: 285px;
+        height: 250px;
+        background: url(images/news1.jpg) no-repeat;
+        animation: news1 3s infinite both linear alternate;
+        border: 1px solid transparent;
+      }
+      @keyframes news1 {
+        0% {
+          background: url(images/news1.jpg);
+        }
+        100% {
+          background: url(images/news2.jpg);
+        }
+      }
+      .product .news .box:hover {
+        border-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <div class="rewiew">
+        <h2>제품리뷰</h2>
+        <div class="box">
+          <div class="picture">
+            <img src="images/review1.png" alt="review" />
+          </div>
+          <div class="desc">
+            <p>[오리지널컬렉션 체리블로섬 바디워시]</p>
+            <p class="star">
+              <span>flrr*****</span>
+              <span><img src="images/star.png" alt="star" /></span>
+            </p>
+            <p>
+              정말 오랜만에 향기도 좋고 성분도 착한 바디워시를 만났어요!
+              마일드한 세정력도 좋고 저자극의 바디워시입니다.
+            </p>
+          </div>
+        </div>
+        <div class="box rewiew2">
+          <div class="picture">
+            <img src="images/review2.png" alt="review" />
+          </div>
+          <div class="desc">
+            <p>[해피바스 마이크로미셀라 딥 클렌징 폼]</p>
+            <p class="star">
+              <span>pcs0***</span>
+              <span><img src="images/star.png" alt="star" /></span>
+            </p>
+            <p>
+              항상 마이크로 미셀라 딥 클렌징 폼을 사용하는데 역시 세정력
+              우수하고 피부가 개운해요 확실히 마무리가 촉촉한 느낌이 있어요!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="news">
+        <h2>해피바스 새소식</h2>
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>

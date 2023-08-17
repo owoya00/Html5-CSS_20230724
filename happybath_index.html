@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      header {
+        border-bottom: 1px solid#ccc;
+      }
+      .top {
+        width: 990px;
+        height: 100px;
+        margin: 0 auto;
+        background: url(images/happy/HAPPY\ BATH.png) no-repeat center;
+        object-fit: cover;
+      }
+      .top ul {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .top ul li {
+        line-height: 100px;
+      }
+      .top ul li a::after {
+        content: "|";
+        color: #ddd;
+        margin: 0 10px;
+      }
+      .top ul li:last-child a::after {
+        content: "";
+      }
+      .top ul li img {
+        width: 16px;
+      }
+      nav {
+        width: 990px;
+        margin: 10px auto;
+      }
+      nav .lnb {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      nav .lnb ul {
+        display: none;
+        transition: 1s;
+      }
+      nav .lnb ul li a {
+        line-height: 30px;
+      }
+      nav .lnb:hover ul {
+        display: block;
+      }
+
+      nav .lnb ul a:hover {
+        text-decoration: underline;
+      }
+      .visual {
+        width: 1600px;
+        height: 520px;
+        margin: 0 auto;
+        animation-name: side;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+      }
+      @keyframes side {
+        0% {
+          background: url(images/happy/images01.jpg);
+        }
+        25% {
+          background: url(images/happy/images02.jpg);
+        }
+        50% {
+          background: url(images/happy/images03.jpg);
+        }
+        100% {
+          background: url(images/happy/images04.jpg);
+        }
+      }
+      .main-item {
+        width: 990px;
+        margin: 20px auto;
+      }
+      .main-item .item {
+        text-align: center;
+      }
+      .main-item .item h2 {
+        position: relative;
+      }
+      .main-item .item h2::before {
+        content: "";
+        width: 350px;
+        height: 1px;
+        background: #ccc;
+        position: absolute;
+        left: 0px;
+        top: 15px;
+      }
+      .main-item .item h2::after {
+        content: "";
+        width: 350px;
+        height: 1px;
+        background: #ccc;
+        position: absolute;
+        right: 0px;
+        top: 15px;
+      }
+
+      .main-item .pro ul {
+        display: flex;
+        justify-content: space-around;
+        background: url(images/happy/item-bg.png) no-repeat;
+        background-position: bottom;
+        transition: 1;
+      }
+      .main-item .pro ul li {
+        text-align: center;
+      }
+      .main-item .pro ul li:hover img {
+        transform: scale(1.2);
+      }
+
+      .main-item .pro ul li p {
+        margin-top: 20px;
+      }
+
+      .main-item .pro ul li:hover p {
+        font-weight: 600;
+      }
+      .happy {
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .happy > div {
+        display: flex;
+        width: 463px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .happy ul {
+        width: 100%;
+        height: 306px;
+        display: flex;
+        border: 1px solid transparent;
+        overflow: hidden;
+      }
+      .happy ul li {
+        position: relative;
+        flex: 1 1 30%;
+        transition: flex-basis 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+      }
+      .happy ul li.first {
+        background: url(images/sample01.jpg);
+      }
+      .happy ul li.second {
+        background: url(images/sample02.jpg);
+      }
+      .happy ul li.third {
+        background: url(images/sample03.jpg);
+      }
+      .left .title {
+        text-align: center;
+        line-height: 306px;
+        font-size: 20px;
+        color: #fff;
+      }
+      .left .box {
+        position: absolute;
+        width: 300px;
+        left: 0;
+        top: 0;
+        padding-top: 120px;
+        color: #fff;
+        opacity: 0;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .left ul:hover .title {
+        display: none;
+      }
+      .left ul li:hover .box {
+        opacity: 1;
+      }
+      .left ul:hover li:hover {
+        flex-basis: 60%;
+      }
+      .left ul:hover li:not(:hover) {
+        flex-basis: 20%;
+      }
+      .right {
+        width: 100%;
+      }
+      .right div {
+        width: 465px;
+        height: 306px;
+        background: url(images/beautytalk.jpg) center/100%;
+        margin: 0 auto;
+        text-align: center;
+        transition: 1s;
+        cursor: pointer;
+        border: 1px solid transparent;
+      }
+      .right div p {
+        color: #fff;
+        font-size: 20px;
+        padding-top: 100px;
+      }
+      .right div a {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #fff;
+        margin-top: 50px;
+        color: #fff;
+      }
+      .right div a:hover {
+        background: rgba(255, 255, 255, 0.5);
+        color: #333;
+      }
+      .right div:hover {
+        background-size: 120%;
+      }
+      .happy .left:hover ul,
+      .happy .right:hover div {
+        border-color: #000;
+      }
+
+      footer .foot {
+        background: #f8f8f8;
+        text-align: center;
+      }
+      footer .bottem {
+        margin-top: 30px;
+      }
+      footer .bottem ul {
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      footer .bottem ul li::after {
+        content: "|";
+        margin: 0 20px;
+      }
+
+      footer .bottem ul li:last-child:after {
+        contain: "";
+      }
+      footer .end {
+        width: 990px;
+        margin: 0 auto;
+        background: url(images/happy/WA.png) no-repeat right;
+        text-align: center;
+      }
+      footer .end P {
+        margin-top: 10px;
+        text-align: center;
+      }
+      footer .end P:last-child {
+        margin-bottom: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="head">
+          <div class="top">
+            <!-- <div class="logo">
+              <img src="images/happy/HAPPY BATH.png" alt="logo" />
+            </div> -->
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">구매하기</a></li>
+              <li><a href="#">매장찾기</a></li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="images/happy/bg-header-searchbtn.png"
+                    alt="searchbtn"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <ul class="lnb">
+            <li>
+              <a href="#">해피바스 <strong>이야기</strong></a>
+              <ul>
+                <li><a href="#">브랜드 히스토리</a></li>
+                <li><a href="#">영상 갤러리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">해피바스<strong> 선물</strong></a>
+              <ul>
+                <li><a href="#">행복의 순간 </a></li>
+                <li><a href="#">> 내추럴성분 </a></li>
+                <li><a href="#">> 풍성한 향 </a></li>
+                <li><a href="#">> 즐거운 경험</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">해피바스 <strong>뷰티톡</strong></a>
+              <ul>
+                <li><a href="#">피부고민 X 뷰티팁</a></li>
+                <li><a href="#">자산화 원료</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">해피바스 <strong>제품</strong></a>
+              <ul>
+                <li><a href="#">유형별 제품</a></li>
+                <li><a href="#">고민별 제품</a></li>
+                <li><a href="#">전체제품</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="visual"></div>
+      <div class="main-item">
+        <div class="item"><h2>베스트셀러 아이템</h2></div>
+        <div class="pro">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="images/happy/pro01.png" alt="pro01" />
+                <p>해피바스 마이크로 미셀라<br />딥 클렌징폼</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/happy/pro02.png" alt="pro02" />
+                <p>해피바스 오리지널컬렉션<br />오리지널 바디워시</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/happy/pro03.png" alt="pro03" />
+                <p>해피바스 오리지널컬렉션<br />베이비파우더 바디워시</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/happy/pro04.png" alt="pro04" />
+                <p>해피바스 오리지널컬렉션<br />솝 라벤더 바디워시</p></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rivew">
+        <div class="left">
+          <h2>제품 리뷰</h2>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="happy">
+        <div class="left">
+          <h2>해피바스 선물</h2>
+          <ul>
+            <li class="first">
+              <p class="title">내추럴 성분</p>
+              <div class="box">
+                <p>해피바스가 담고 있는<br />'내추럴 성분'이 궁금하다면?</p>
+              </div>
+            </li>
+            <li class="second">
+              <p class="title">풍성한 향</p>
+              <div class="box">
+                <p>해피바스가 펼쳐지는<br />'풍성한 향'이 궁금하다면?</p>
+              </div>
+            </li>
+            <li class="third">
+              <p class="title">즐거운 경험</p>
+              <div class="box">
+                <p>해피바스가 이끄는<br />'즐거운 경험'이 궁금하다면?</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <h2>해피바스 뷰티톡</h2>
+          <div>
+            <p>피부고민에 따른 뷰티팁을 드려요</p>
+            <a href="#">more</a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="foot">
+          <img src="images/happy/sns_facebook.png" alt="sns_facebook" />
+          <img src="images/happy/sns_youtube.png" alt="sns_youtube" />
+          <img src="images/happy/sns_Instagram.png" alt="sns_Instagram" />
+        </div>
+        <div class="bottem">
+          <ul>
+            <li><a href="#">서비스 이용약관</a></li>
+            <li><a href="#">개입정보처리방침</a></li>
+            <li><a href="#">영상처리방침</a></li>
+            <li><a href="#">뷰티포인트</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+        </div>
+        <div class="end">
+          <p>
+            고객상담팀(수신자 요금 부담) 080-023-5454 | 상담시간 월~금 : AM
+            09:00 ~ PM 06:00
+          </p>
+          <p>© AMOREPACIFIC CORPORATION. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

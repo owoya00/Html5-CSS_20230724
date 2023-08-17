@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: NanumSquareNeo;
+        src: url(font/NanumSquareNeoTTF-bRg.woff) format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "NanumSquareNeo", Arial, "맑은고딕", sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      nav {
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+      }
+      h1 {
+        width: 1000px;
+        margin: 0 auto;
+        font-size: 25px;
+        color: #666261;
+        margin-bottom: 95px;
+      }
+
+      .top {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .top ul {
+        width: 100%;
+        height: 70px;
+        background: #00365f;
+        overflow: hidden;
+      }
+      .top ul li {
+        position: relative;
+        float: left;
+        z-index: 10;
+      }
+      .top ul li a {
+        display: block;
+        padding: 0 20px;
+        color: #fff;
+        line-height: 70px;
+      }
+      .top ul li:hover a {
+        background: #fe0002;
+      }
+      .banner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+      }
+      .main {
+        clear: both;
+        position: relative;
+        top: 300px;
+        width: 1000px;
+        margin: 10px auto;
+      }
+      .main h2 {
+        color: #5a5657;
+        font-size: 25px;
+      }
+      .main .left {
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+      }
+      .main .left h3 {
+        color: #5a5657;
+        margin-bottom: 20px;
+      }
+      .main .left span {
+        color: #5a5657;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .main .left p {
+        text-align: center;
+      }
+      .main .left .button {
+        width: 100%;
+        overflow: hidden;
+      }
+      .main .left .button02 {
+        float: right;
+        width: 120px;
+        line-height: 40px;
+        border-radius: 10px;
+        margin: 10px;
+        border: 1px solid#a5a5a5;
+        background: #f7f7f7;
+        text-align: center;
+      }
+      .main .right {
+        width: 40%;
+        float: right;
+      }
+      .main .right p {
+        margin: 5px 0;
+      }
+      .main .right p:last-child {
+        margin-bottom: 30px;
+      }
+
+      .main .right a {
+        color: #2d5a6f;
+      }
+      footer {
+        clear: both;
+        position: relative;
+        top: 300px;
+        width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        background: #e6e6e6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Growth Clinic Story</h1>
+    <nav>
+      <div class="top">
+        <ul>
+          <li><a href="#">Information</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Clinic Test</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="banner">
+        <img src="clinicstory/images/bg_main.png" alt="bg_main" />
+      </div>
+    </nav>
+    <div class="main">
+      <div class="left">
+        <h2>Food Story For Growth</h2>
+        <h3>해독 기능이 뛰어난 여름철 수박 껍질 차</h3>
+        <p>
+          수박 껍질 차는 아무리 먹어도 살이 찌지 않기 때문에 한여름의 갈증을
+          없애고 스트레스로 갑갑증을 풀어주며 무더위를 날려 주는 데는 최고의
+          식품이다. 수박 껍질 속의 시트룰린 성분은 간에서 효소의 생성을
+          촉진하므로 과잉 생성된 성호르몬의 분해에 도움이 되며, 혈압을 낮추는
+          효과가 있다. 특히 수박 껍질차는 급성만성 신장염에 효과가 있으며
+          시트룰린이 많아 소변도 잘 나오게 한다.
+        </p>
+        <div class="button">
+          <div class="button02">More Read</div>
+        </div>
+        <h3>천식에는 오미자차</h3>
+        <p>
+          오미자는 음혈이 허약하고 부족하며 심신이 불안하여 유발된 불면증 치료에
+          좋은 효과가 있으며, 각종 알레르기 증세로 인해 숙면을 취하지 못하는
+          경우에도 많이 응용되고 있다.
+        </p>
+        <div class="button">
+          <div class="button02">More Read</div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="clinic">
+          <h2>Clinic Category</h2>
+
+          <p><a href="#">자가진단</a></p>
+          <p><a href="#">성장 장애</a></p>
+          <p><a href="#">발육 표준치</a></p>
+          <p><a href="#">성장 상식</a></p>
+          <p><a href="#">예상키 검사</a></p>
+          <p><a href="#">비만도 검사</a></p>
+          <p><a href="#">키크는 식품</a></p>
+          <p><a href="#">키크는 운동</a></p>
+          <p><a href="#">음식 백과</a></p>
+          <p><a href="#">성장 장애 예방법</a></p>
+          <p><a href="#">성장 장애 FAQ</a></p>
+          <p><a href="#">상담실</a></p>
+        </div>
+        <div class="link">
+          <h2>Link Site</h2>
+          <p><a href="#">보건 복지부</a></p>
+          <p><a href="#">의료 보험 공단</a></p>
+          <p><a href="#">질병 관리 보험 본부</a></p>
+          <p><a href="#">국립 보건 연구원</a></p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="foot">
+        <p>Copyright ⓒ 2012. The Growth Clinic Story. Since 1998.</p>
+      </div>
+    </footer>
+  </body>
+</html>

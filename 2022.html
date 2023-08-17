@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .top {
+        width: 999px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      .top ul {
+        width: 242px;
+        margin: 0 auto;
+      }
+      .top ul li {
+        float: left;
+      }
+      nav {
+        background: #425b71;
+        height: 33px;
+      }
+      nav ul {
+        width: 999px;
+        margin: 0 auto;
+      }
+      nav ul li {
+        float: left;
+      }
+      nav ul li a::after {
+        content: url(images/colorbag/images/color_topmenuline.jpg);
+      }
+      nav ul li:last-child a::after {
+        content: "";
+      }
+      input {
+        display: none;
+      }
+      .main_visual {
+        width: 999px;
+        margin: 20px auto;
+      }
+      .main_visual ul.visual {
+        height: 337px;
+      }
+      .main_visual ul.visual li {
+        display: none;
+      }
+      #bag1:checked ~ .main_visual ul.visual li:first-child,
+      #bag2:checked ~ .main_visual ul.visual li:nth-child(2),
+      #bag3:checked ~ .main_visual ul.visual li:last-child {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="top">
+        <div class="logo">
+          <a href="#"
+            ><img src="images/colorbag/images/color_toplogo.jpg" alt="logo"
+          /></a>
+        </div>
+        <ul class="clearfix">
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmini1.jpg"
+                alt="topmini1"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmini2.jpg"
+                alt="topmini2"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmini3.jpg"
+                alt="topmini3"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmini4.jpg"
+                alt="topmini4"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmini5.jpg"
+                alt="topmini5"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmini6.jpg"
+                alt="topmini6"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="clearfix">
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmenu1.jpg"
+                alt="topmenu1"
+            /></a>
+          </li>
+
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmenu2.jpg"
+                alt="topmenu2"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmenu3.jpg"
+                alt="topmenu3"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmenu4.jpg"
+                alt="topmenu4"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmenu5.jpg"
+                alt="topmenu5"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmenu6.jpg"
+                alt="topmenu6"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmenu7.jpg"
+                alt="topmenu7"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/colorbag/images/color_topmenu8.jpg"
+                alt="topmenu8"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <input type="radio" name="bag" id="bag1" checked />
+      <input type="radio" name="bag" id="bag2" />
+      <input type="radio" name="bag" id="bag3" />
+      <div class="main_visual">
+        <ul class="visual">
+          <li>
+            <img src="images/colorbag/images/color_main1.jpg" alt="main1" />
+          </li>
+          <li>
+            <img src="images/colorbag/images/color_main2.jpg" alt="main2" />
+          </li>
+          <li>
+            <img src="images/colorbag/images/color_main3.jpg" alt="main3" />
+          </li>
+        </ul>
+        <ul class="btn clearfix">
+          <li><label for="bag1">스퀘어 토드 숄더백(합성피혁)</label></li>
+          <li><label for="bag2">사각 누빔 체인백(합성피혁)</label></li>
+          <li><label for="bag3">사각 퀄딩 백(합성피혁)</label></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

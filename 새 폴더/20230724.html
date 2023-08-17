@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clearfix::after,
+      .clearfix::before {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, "맑은고딕", sans-serif;
+      }
+      input {
+        display: none;
+      }
+      .main_visual {
+        width: 999px;
+        margin: 0 auto;
+      }
+      .main_visual ul.visual {
+        height: 377px;
+      }
+      .main_visual ul.visual li {
+        display: none;
+      }
+      #bag1:checked ~ .main_visual ul.visual li:first-child,
+      #bag2:checked ~ .main_visual ul.visual li:nth-child(2),
+      #bag3:checked ~ .main_visual ul.visual li:last-child {
+        display: block;
+      }
+
+      .btn li {
+        float: left;
+        width: calc(100% / 3);
+        background: #9cc;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+      }
+      .btn li label {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      #bag1:checked ~ .main_visual ul.btn li:first-child,
+      #bag2:checked ~ .main_visual ul.btn li:nth-child(2),
+      #bag3:checked ~ .main_visual ul.btn li:last-child {
+        background: #699;
+      }
+      ul.btn li:hover {
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" id="bag1" name="bag" checked />
+    <input type="radio" id="bag2" name="bag" />
+    <input type="radio" id="bag3" name="bag" />
+    <div class="main_visual">
+      <ul class="visual">
+        <li>
+          <img src="images/color_main1.jpg" alt="color_main1" />
+        </li>
+        <li>
+          <img src="images/color_main2.jpg" alt="color_main2" />
+        </li>
+        <li>
+          <img src="images/color_main3.jpg" alt="color_main3" />
+        </li>
+      </ul>
+      <ul class="btn clearfix">
+        <li><label for="bag1">스퀘어 토드 숄더백(합성피혁)</label></li>
+        <li><label for="bag2">사각 누빔 체인백(합성피혁)</label></li>
+        <li><label for="bag3">사각 퀄딩 백(합성피혁)</label></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        margin: 0 auto;
+        height: 300px;
+      }
+      div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="images/milk1.jpg" alt="milk" />
+    </div>
+    <script>
+      let x = document.getElementsByTagName("img")[0];
+      let i = 1;
+      function silde() {
+        x.setAttribute("src", "images/milk" + i + ".jpg");
+        i++;
+
+        console.log(i);
+        if (i > 15) {
+          i = 1;
+        }
+      }
+      //   setInterval(function () {
+      //     silde();
+      //   }, 1000);
+      //   setInterval(silde, 1000);
+      let interval;
+      function sildestart() {
+        interval = setInterval(silde, 1000);
+      }
+      sildestart();
+      x.onmouseenter = function () {
+        clearInterval(interval);
+      };
+      x.onmouseleave = function () {
+        sildestart();
+      };
+    </script>
+  </body>
+</html>
