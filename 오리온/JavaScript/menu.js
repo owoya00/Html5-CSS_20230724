@@ -22,3 +22,11 @@ sub.forEach(function (item, keys) {
     gnb[keys].classList.remove("active");
   });
 });
+
+document.getElementById("menu_bar").addEventListener("click", function () {
+  this.classList.toggle("menu_bar01");
+  document.getElementById("menu_bar_one").classList.toggle("bar1");
+  document.getElementById("menu_bar_two").classList.toggle("bar2");
+  document.getElementById("menu_bar_three").classList.toggle("bar3");
+  document.getElementById("side_info").classList.toggle("box");
+});

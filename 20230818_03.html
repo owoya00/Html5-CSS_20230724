@@ -369,13 +369,6 @@
           otherItem.forEach(function (item) {
             item.style.height = "0px";
             item.style.opacity = "0";
-          });
-          sub.forEach(function () {
-            let subht = sub[j].offsetHeight;
-            console.log("subht : " + subht);
-            subMenu[j].style.height = subht + "px";
-            subMenu[j].style.opacity = "1";
-          });
         });
 
         item.addEventListener("mouseleave", function () {
