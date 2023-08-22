@@ -173,7 +173,7 @@ header {
 }
 
 .headbg {
-  width: 1920px;
+  width: 100%;
   height: 800px;
   position: absolute;
   left: 0;
