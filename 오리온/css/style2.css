@@ -178,6 +178,7 @@ header {
   position: absolute;
   left: 0;
   top: 0;
+
   margin: 0 auto;
   z-index: -3;
   animation: sidebg 20s infinite linear both;
