@@ -2,6 +2,10 @@ let content = document.querySelector(".all_menupro");
 let btn = document.querySelectorAll(".tablink");
 let pro = document.querySelectorAll(".product_info > ul > li");
 let ht = pro[0].offsetHeight;
+for (let i = 0; i < 7; i++) {
+  pro[i].style.opacity = "0";
+}
+pro[0].style.opacity = "1";
 console.log(ht);
 document.querySelector(".product_info").style.height = ht + "px";
 content.style.backgroundImage = "url(images2/slide1.gif)";
