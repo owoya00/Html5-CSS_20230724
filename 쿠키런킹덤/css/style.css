@@ -1,0 +1,139 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.topnavbg {
+  width: 100%;
+  background: #191d24;
+}
+.topnav {
+  width: 1280px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 80%;
+  height: 100%;
+}
+.logo img {
+  width: 152px;
+  margin-left: ;
+}
+.gamelist {
+  width: 480px;
+  height: 460px;
+  background: #191d24;
+  opacity: 0.9;
+  position: relative;
+  display: none;
+}
+.xbtn {
+  width: 65px;
+  height: 65px;
+  background: #191d24;
+  text-align: center;
+  position: absolute;
+  right: -65px;
+  top: 0;
+}
+
+.xbtn img {
+  width: 80%;
+  object-fit: cover;
+  vertical-align: middle;
+  margin: 6px;
+}
+.gamelist ul > li {
+  width: 100%;
+  height: 150px;
+  border-top: 1px solid#aeaeb3;
+}
+
+.gamelist ul > li > a {
+  display: flex;
+  color: #aeaeb3;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.gamelist ul > li > a img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.game_info > h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 5px;
+}
+.game_info > p {
+  width: 120px;
+  height: 40px;
+  background: #ffd71e;
+  border-radius: 20px;
+  color: #191d24;
+  text-align: center;
+  font-weight: 800;
+}
+.topnav_right {
+  width: 28%;
+  color: #aeaeb3;
+  font-size: 14px;
+  display: flex;
+}
+.gamelist ul li span {
+  font-size: 15px;
+}
+.topnav_right > a {
+  width: 40%;
+  color: #aeaeb3;
+  text-align: center;
+}
+
+.language {
+  width: 40%;
+  text-align: center;
+  position: relative;
+  background: #191d24;
+  color: #aeaeb3;
+}
+.language p::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+.language p.languageactive::after {
+  content: "▲";
+  opacity: 1;
+}
+.language_list {
+  width: 100%;
+  background: #191d24;
+  display: none;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.languagepage li > a {
+  display: block;
+  color: #aeaeb3;
+  font-size: 14px;
+}
+.languagepage li:hover > a {
+  background: #ccc;
+  color: black;
+}

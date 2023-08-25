@@ -1,8 +1,7 @@
 let subMenu = document.querySelectorAll(".submenu");
 let sub = document.querySelectorAll(".lnb");
 let gnb = document.querySelectorAll(".menu ul li a");
-let ht = document.querySelectorAll(".lnb").offsetHeight;
-console.log("ht:" + ht);
+
 gnb.forEach(function (item, keys) {
   item.addEventListener("mouseenter", function (e) {
     let j = Array.from(gnb).indexOf(e.target);
@@ -19,13 +18,13 @@ gnb.forEach(function (item, keys) {
 
     sub.forEach(function () {
       let subht = sub[j].offsetHeight;
-      console.log("subht : " + subht);
+      //console.log("subht : " + subht);
       subMenu[j].style.height = subht + "px";
       subMenu[j].style.opacity = "1";
     });
   });
   item.addEventListener("mouseleave", function () {
-    for (let i = 0; i <= 6; i++) {
+    for (let i = 0; i <= 5; i++) {
       subMenu[i].style.height = 0 + "px";
     }
   });
@@ -33,16 +32,19 @@ gnb.forEach(function (item, keys) {
 subMenu.forEach(function (item, keys) {
   item.addEventListener("mouseenter", function (e) {
     let j = Array.from(subMenu).indexOf(e.target);
+    console.log(j);
     sub.forEach(function () {
       let subht = sub[j].offsetHeight;
-      console.log("subht : " + subht);
+      //console.log("subht : " + subht);
       subMenu[j].style.height = subht + "px";
       subMenu[j].style.opacity = "1";
     });
+    console.log(j);
     gnb[j].classList.add("on", "active");
   });
+
   item.addEventListener("mouseleave", function (e) {
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 5; i++) {
       subMenu[i].style.height = 0 + "px";
     }
     gnb[keys].classList.remove("on", "active");
@@ -54,7 +56,7 @@ document.getElementById("menu_bar").addEventListener("click", function () {
   document.getElementById("menu_bar_one").classList.toggle("bar1");
   document.getElementById("menu_bar_two").classList.toggle("bar2");
   document.getElementById("menu_bar_three").classList.toggle("bar3");
-  document.getElementById("side_info").classList.toggle("box");
+  document.getElementsByClassName("side_info")[0].classList.toggle("box");
 });
 
 let newscontent = document.querySelectorAll(".index_news > div");
@@ -65,7 +67,7 @@ for (let a = 0; a <= 3; a++) {
 newscontent[0].style.display = "block";
 
 newsbtn.forEach(function (item, keys) {
-  console.log("item :" + item + "\n" + "keys : " + keys);
+  //console.log("item :" + item + "\n" + "keys : " + keys);
   item.onclick = function (e) {
     let b = Array.from(newsbtn).indexOf(e.target);
     console.log("b : " + b);
