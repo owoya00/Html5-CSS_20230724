@@ -1,0 +1,26 @@
+nav {
+  width: 1280px;
+  margin: 0 auto;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  width: 500px;
+  background: #f00;
+}
+nav ul li a {
+  width: 500px;
+  color: #8ac007;
+}
+
+footer div {
+  height: 100px;
+}
+footer div.top {
+  width: 600px;
+  background: red;
+}
+footer div.bottom {
+  width: 300px;
+}/*# sourceMappingURL=main.css.map */

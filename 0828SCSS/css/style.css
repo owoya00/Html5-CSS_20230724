@@ -1,0 +1,15 @@
+nav {
+  width: 1280px;
+  margin: 0 auto;
+}
+nav ul {
+  width: 80%;
+  margin: 0 auto;
+}
+nav ul li {
+  background: #ccc;
+}
+nav ul li a {
+  color: #f00;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

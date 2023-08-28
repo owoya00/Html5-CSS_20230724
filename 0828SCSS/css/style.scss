@@ -1,0 +1,16 @@
+@charset "UTF-8";
+nav {
+  width: 1280px;
+  margin: 0 auto;
+  ul {
+    width: 80%;
+    margin: 0 auto;
+    li {
+      background: #ccc;
+      a {
+        color: #f00;
+        text-decoration: none;
+      }
+    }
+  }
+}

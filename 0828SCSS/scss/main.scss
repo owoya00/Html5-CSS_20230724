@@ -1,0 +1,5 @@
+@for $1 from 1 through 3 {
+  .sub:nth-child($1) {
+    width: 50px * $1;
+  }
+}

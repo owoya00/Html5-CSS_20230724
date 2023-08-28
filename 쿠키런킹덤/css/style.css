@@ -116,7 +116,7 @@ a {
   right: 15px;
   top: 0;
 }
-.language p.languageactive::after {
+.language p.active::after {
   content: "▲";
   opacity: 1;
 }
