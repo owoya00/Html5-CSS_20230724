@@ -5,7 +5,7 @@ let gnb = document.querySelectorAll(".menu ul li a");
 gnb.forEach(function (item, keys) {
   item.addEventListener("mouseenter", function (e) {
     let j = Array.from(gnb).indexOf(e.target);
-    console.log(j);
+    //console.log(j);
     function others(item) {
       return item !== j;
     }
@@ -17,7 +17,8 @@ gnb.forEach(function (item, keys) {
     });
 
     sub.forEach(function () {
-      let j = Array.from(sub).indexOf(e.target);
+      let j = Array.from(gnb).indexOf(e.target);
+      console.log(j);
       let subht = sub[j].offsetHeight;
       //console.log("subht : " + subht);
       subMenu[j].style.height = subht + "px";
