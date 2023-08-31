@@ -9,6 +9,9 @@ ul {
 a {
   text-decoration: none;
 }
+#wrap {
+  min-width: 1280px;
+}
 .topnavbg {
   width: 100%;
   background: #191d24;
@@ -21,6 +24,7 @@ a {
   display: flex;
   justify-content: space-between;
   position: relative;
+  z-index: 10;
 }
 .logo {
   width: 80%;
@@ -31,22 +35,28 @@ a {
   position: relative;
 }
 .game_series {
-  width: 480px;
-  height: 460px;
+  width: 545px;
+  height: 0;
+  overflow: hidden;
   position: absolute;
   left: 0;
-  top: -500px;
-  background: #191d24;
+  top: 40px;
   opacity: 0.9;
   transition: 0.2s ease-in-out;
 }
 .box {
   top: 40px;
+  height: 460px;
 }
 .gamelist {
+  display: flex;
   width: 100%;
-  height: 100%;
+  height: 460px;
   position: relative;
+}
+.gamelist ul {
+  width: 480px;
+  background: #191d24;
 }
 .xbtn {
   width: 65px;
@@ -54,7 +64,7 @@ a {
   background: #191d24;
   text-align: center;
   position: absolute;
-  right: -65px;
+  right: 0px;
   top: 0px;
 }
 
@@ -134,7 +144,6 @@ a {
   display: none;
   background: #191d24;
   overflow: hidden;
-  transition: 0.5s;
 }
 .languagepage li > a {
   display: block;
@@ -145,16 +154,33 @@ a {
   background: #ccc;
   color: black;
 }
+
+.game_video {
+  height: 100vh;
+}
+.game_video video {
+  height: 100%;
+  object-fit: cover;
+}
+.main_top {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 40px;
+}
+
 .menubar_position {
+  width: 100%;
+  margin: 0 auto;
   position: relative;
 }
 .menubar {
   width: 100%;
   height: 77px;
+  position: fixed;
+  top: 40px;
   background: #000000b3;
-  position: static;
-  top: 0;
-  left: 0;
 }
 .menubar_align {
   width: 1280px;
@@ -162,6 +188,7 @@ a {
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
 }
 .menubar_left {
   width: 18%;
@@ -185,18 +212,19 @@ a {
 }
 .main_geme {
   width: 100%;
-  height: 100vh;
-  background: ;
+  height: 966px;
+  overflow: hidden;
+  background: #191d24;
 }
 .main_logo {
   width: 1280px;
   margin: 0 auto;
   text-align: center;
-  background: #191d24;
 }
 .main_logo img {
   width: 370px;
   object-fit: cover;
+  margin: 100px auto;
 }
 .main_centersvg {
   width: 1280px;
@@ -205,4 +233,200 @@ a {
 }
 .main_centersvg img {
   width: 148px;
+  margin: 40px auto;
+}
+.store {
+  width: 980px;
+  margin: 30px auto;
+  display: flex;
+}
+.store li {
+  width: 25%;
+}
+.scroll {
+  width: 100%;
+  margin: 70px auto;
+  text-align: center;
+  animation: bounce 1.5s infinite ease-in;
+}
+@keyframes bounce {
+  0%,
+  to {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+aside.navercafe {
+  position: fixed;
+  right: 150px;
+  top: 150px;
+  z-index: 1;
+}
+aside.navercafe img {
+  width: 83px;
+}
+.game_introduce {
+  width: 100%;
+  margin: 0 auto;
+}
+.information1 {
+  width: 100%;
+  background: #302a24;
+}
+.intro_top {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.intro_top_img {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro_top_img > li:first-child img,
+.intro_top_img > li:last-child img {
+  width: 178px;
+}
+.intro_top_img > li:nth-child(2) img {
+  width: 70px;
+  height: 40px;
+}
+.intro_top_img > li:last-child img {
+  transform: scalex(-1);
+}
+.intro_top > span {
+  font-size: 30px;
+  color: #c59771;
+}
+.intro_top > h1 {
+  font-size: 60px;
+  color: #c59771;
+}
+.cookie_intro {
+  width: 960px;
+  height: 66px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.cookie_intro > div {
+  width: 136px;
+  height: 66px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cookie_intro div > span {
+  position: relative;
+  display: block;
+  width: 108px;
+  line-height: 66px;
+  height: 66px;
+  font-size: 21px;
+  color: #c18243;
+  background: url(../images/parentheses_center.svg) no-repeat;
+}
+.cookie_intro div > span::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 66px;
+  left: -14px;
+  top: 0;
+  background: url(../images/parentheses_side.svg) no-repeat;
+}
+.cookie_intro div > span::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 66px;
+  right: -14px;
+  top: 0;
+  background: url(../images/parentheses_side.svg) no-repeat;
+  transform: scaleX(-1);
+}
+.cookie_intro > div > p {
+  position: absolute;
+  left: -8px;
+  top: 6px;
+  width: 124px;
+  height: 54px;
+}
+.cookie_intro div:hover > span {
+  color: #fff;
+  font-weight: 800;
+}
+.cookie_intro div:hover > p {
+  background: #493220;
+}
+.cookie_img {
+  width: 960px;
+  height: 550px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.arrow_img {
+  width: 52px;
+  line-height: 530px;
+}
+.arrow_img > img {
+  width: 52px;
+  height: 80px;
+}
+.twist {
+  transform: scaleX(-1);
+}
+.cookie_intro_frame {
+  width: 800px;
+  position: relative;
+}
+.cookie_intro_frame > ul {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.cookie_intro_frame > ul li {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.cookie_intro_frame > ul li img {
+  width: 95%;
+  height: 485px;
+  line-height: 485px;
+}
+.cookie_intro_frame .frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cookie_intro_frame .frame img {
+  width: 100%;
+}
+.stud {
+  width: 1280px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.stud ul {
+  width: 300px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.stud ul li {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c08d55;
 }

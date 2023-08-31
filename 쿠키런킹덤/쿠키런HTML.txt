@@ -123,10 +123,11 @@
       <aside><img src="images/naverCafeLogo.png" alt="naverCafeLogo" /></aside>
       <section>
         <div class="game_introduce">
-          <div class="intro_top">
-            <img src="images/indication.svg" alt="indication" />
-            <img src="images/centerDeco.png" alt="centerDeco" />
-            <img src="images/indication.svg" alt="indication" />
+           <ul class="intro_top_img">
+              <li><img src="images/indication.svg" alt="indication" /></li>
+              <li><img src="images/centerDeco.png" alt="centerDeco" /></li>
+              <li><img src="images/indication.svg" alt="indication" /></li>
+            </ul>
             <span>COOKIERUN: KINGDOM</span>
             <h1>게임소개</h1>
           </div>
@@ -179,10 +180,11 @@
       </section>
       <section>
         <div class="game_character">
-          <div class="intro_top">
-            <img src="images/indication.svg" alt="indication" />
-            <img src="images/centerDeco.png" alt="centerDeco" />
-            <img src="images/indication.svg" alt="indication" />
+         <ul class="intro_top_img">
+              <li><img src="images/indication.svg" alt="indication" /></li>
+              <li><img src="images/centerDeco.png" alt="centerDeco" /></li>
+              <li><img src="images/indication.svg" alt="indication" /></li>
+            </ul>
             <span>COOKIERUN: KINGDOM</span>
             <h1>COOKIERUN: KINGDOM CHARACTERS</h1>
             <p>※ 일부 캐릭터는 추후 업데이트 예정입니다.</p>
@@ -706,10 +708,11 @@
       </section>
       <section>
         <div class="cookie_story">
-          <div class="intro_top">
-            <img src="images/indication.svg" alt="indication" />
-            <img src="images/centerDeco.png" alt="centerDeco" />
-            <img src="images/indication.svg" alt="indication" />
+         <ul class="intro_top_img">
+              <li><img src="images/indication.svg" alt="indication" /></li>
+              <li><img src="images/centerDeco.png" alt="centerDeco" /></li>
+              <li><img src="images/indication.svg" alt="indication" /></li>
+            </ul>
             <span>COOKIERUN: KINGDOM</span>
             <h1>세계관 스토리</h1>
           </div>
@@ -749,10 +752,11 @@
       </section>
       <section>
         <div class="cookie_video">
-          <div class="intro_top">
-            <img src="images/indication.svg" alt="indication" />
-            <img src="images/centerDeco.png" alt="centerDeco" />
-            <img src="images/indication.svg" alt="indication" />
+          <ul class="intro_top_img">
+              <li><img src="images/indication.svg" alt="indication" /></li>
+              <li><img src="images/centerDeco.png" alt="centerDeco" /></li>
+              <li><img src="images/indication.svg" alt="indication" /></li>
+            </ul>
             <span>COOKIERUN: KINGDOM</span>
             <h1>미디어</h1>
           </div>
