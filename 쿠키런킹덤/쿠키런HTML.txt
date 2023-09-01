@@ -121,8 +121,8 @@
         </div>
       </section>
       <aside><img src="images/naverCafeLogo.png" alt="naverCafeLogo" /></aside>
-      <section>
-        <div class="game_introduce">
+      <section class="game_introduce">
+        <div class="information">
            <ul class="intro_top_img">
               <li><img src="images/indication.svg" alt="indication" /></li>
               <li><img src="images/centerDeco.png" alt="centerDeco" /></li>

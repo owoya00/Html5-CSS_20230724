@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: skyblue;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background: pink;
+      }
+
+      @keyframes hide {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .out {
+        animation: hide 1s forwards;
+      }
+
+      @keyframes show {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .in {
+        animation: show 1s forwards;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#fadeout").click(function () {
+          $("p").removeClass().addClass("out");
+        });
+
+        $("#fadein").click(function () {
+          $("p").removeClass().addClass("in");
+        });
+
+        let fade = true;
+        $("#fadetoggle").click(function () {
+          if (fade) {
+            $("p").removeClass().addClass("in");
+          } else {
+            $("p").removeClass().addClass("out");
+          }
+          fade = !fade;
+        });
+
+        $("#fadeIn").click(function () {
+          $("div").fadeIn("fast", "swing");
+        });
+        $("#fadeOut").click(function () {
+          $("div").fadeOut("slow", "linear");
+        });
+        $("#fadeToggle").click(function () {
+          $("div").fadeToggle(1000, function () {
+            $("div").text("fadeToggle");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="fadein">fadein</button>
+    <button id="fadeout">fadeout</button>
+    <button id="fadetoggle">fadetoggle</button>
+    <br />
+    <br />
+    <div></div>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeToggle">fadeToggle</button>
+  </body>
+</html>

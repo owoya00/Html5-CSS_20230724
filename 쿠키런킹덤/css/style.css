@@ -365,51 +365,65 @@ aside.navercafe img {
   background: #493220;
 }
 .cookie_img {
-  width: 960px;
+  width: 800px;
   height: 550px;
   margin: 0 auto;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-.arrow_img {
-  width: 52px;
-  line-height: 530px;
-}
-.arrow_img > img {
-  width: 52px;
-  height: 80px;
-}
-.twist {
-  transform: scaleX(-1);
-}
-.cookie_intro_frame {
-  width: 800px;
+  /* display: flex;
+  justify-content: space-between; */
   position: relative;
 }
-.cookie_intro_frame > ul {
-  width: 100%;
+#cookie_intro_frame {
+  width: 800px;
+  height: 485px;
+  overflow: hidden;
   margin: 0 auto;
   position: relative;
 }
-.cookie_intro_frame > ul li {
-  width: 100%;
+#cookie_intro_frame > ul {
   position: absolute;
   left: 0;
-  top: 5px;
+  top: 0;
+  transition: 0.5s ease-out;
 }
-.cookie_intro_frame > ul li img {
-  width: 95%;
+#cookie_intro_frame > ul li img {
+  width: 760px;
+}
+#cookie_intro_frame .frame {
+  width: 800px;
   height: 485px;
-  line-height: 485px;
-}
-.cookie_intro_frame .frame {
+  background: url(../images/frame.png) center / 800px 485px;
   position: absolute;
   left: 0;
   top: 0;
 }
-.cookie_intro_frame .frame img {
+#cookie_intro_frame .frame img {
   width: 100%;
+}
+
+.prev {
+  position: absolute;
+  left: 150px;
+  top: 225px;
+  width: 52px;
+  cursor: pointer;
+}
+.prev > img {
+  width: 52px;
+  height: 80px;
+}
+.next {
+  position: absolute;
+  right: 150px;
+  top: 225px;
+  width: 52px;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+.next > img {
+  width: 52px;
+  height: 80px;
 }
 .stud {
   width: 1280px;
@@ -418,15 +432,24 @@ aside.navercafe img {
 }
 
 .stud ul {
-  width: 300px;
+  width: 150px;
   height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 .stud ul li {
+  display: inline-block;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #c08d55;
+  transition: width 0.1s ease-in-out;
+}
+.dotactive,
+.stud ul li:hover {
+  width: 38px;
+  height: 6px;
+  border-radius: 2px;
+  background: #e2ca99;
 }
