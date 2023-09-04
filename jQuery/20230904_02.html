@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        width: 500px;
+        height: 500px;
+        background: skyblue;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <p></p>
+    <button class="left">slide left</button>
+    <button class="right">slide Right</button>
+    <button class="toggle">slide toggle</button>
+    <script>
+      $(function () {
+        $(".left").click(function () {
+          $("p").animate({ width: "0" }, 1000, "swing");
+        });
+        $(".right").click(function () {
+          $("p").animate({ width: "500" }, 1000, "swing");
+        });
+        let status = true;
+        $(".toggle").click(function () {
+          if (status) {
+            $("p").animate({ width: "0" }, 1000, "swing");
+          } else {
+            $("p").animate({ width: "500" }, 1000, "swing");
+          }
+          status = !status;
+        });
+      });
+    </script>
+  </body>
+</html>

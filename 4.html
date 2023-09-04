@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #slideShow {
+        width: 1280px;
+        height: 600px;
+        margin: 100px auto;
+        position: relative;
+        background: #000;
+      }
+      .slide_frame {
+        width: 1280px;
+        text-align: center;
+        transition: 0.5s ease-out;
+        position: relative;
+      }
+      .slides {
+        position: absolute;
+        left: 250px;
+        top: 0;
+
+        display: flex;
+      }
+
+      .slides li img {
+        width: 760px;
+        height: 475px;
+      }
+
+      .frame {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 802px;
+        height: 514px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .frame img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .prev {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        position: absolute;
+        left: 100px;
+        top: 200px;
+      }
+      .next {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 100px;
+        top: 200px;
+        transform: scaleX(-1);
+      }
+      .prev img,
+      .next img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .page {
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 10px;
+        background: pink;
+        text-align: center;
+      }
+      .dot {
+        display: inline-block;
+        text-align: center;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: blue;
+        margin-left: 30px;
+      }
+      .dot:hover,
+      .dotactive {
+        width: 50px;
+        height: 10px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slideShow">
+      <div class="slide_frame">
+        <ul class="slides">
+          <li><img src="cookimg/gameContents_ko1.jpg" alt="photo1" /></li>
+          <li><img src="cookimg/gameContents_ko2.jpg" alt="photo1" /></li>
+          <li><img src="cookimg/gameContents_ko3.jpg" alt="photo1" /></li>
+          <li><img src="cookimg/gameContents_ko4.jpg" alt="photo1" /></li>
+          <li><img src="cookimg/gameContents_ko5.jpg" alt="photo1" /></li>
+        </ul>
+      </div>
+
+      <div class="frame"><img src="cookimg/frame.png" alt="" /></div>
+      <div class="controller">
+        <div class="prev"><img src="cookimg/arrow2.png" alt="" /></div>
+        <div class="next"><img src="cookimg/arrow2.png" alt="" /></div>
+      </div>
+      <div class="page">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#wrap {
+  min-width: 1280px;
+}
+.information2 {
+  width: 100%;
+  margin: 0 auto;
+  background: #594d46;
+}
+.game_character > p {
+  font-size: 17px;
+  color: #c4a893;
+}
+.cookie_kind {
+  width: 960px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.cookie_kind li {
+  width: 213px;
+  height: 66px;
+  line-height: 66px;
+  font-size: 20px;
+  color: #fff3cd;
+  background: url(../images/parentheses3.svg) center/contain no-repeat;
+}
+.cookie_kind li:hover {
+  color: #594d46;
+  font-weight: 800;
+  background: url(../images/parentheses4.svg) center/contain no-repeat;
+}

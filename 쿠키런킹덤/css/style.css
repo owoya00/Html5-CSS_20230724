@@ -291,6 +291,7 @@ aside.navercafe img {
 .intro_top_img > li:first-child img,
 .intro_top_img > li:last-child img {
   width: 178px;
+  padding: 10px 0;
 }
 .intro_top_img > li:nth-child(2) img {
   width: 70px;
@@ -314,85 +315,53 @@ aside.navercafe img {
   display: flex;
   justify-content: space-between;
 }
-.cookie_intro > div {
+.cookie_intro > span {
   width: 136px;
   height: 66px;
+  line-height: 66px;
   margin: 0 auto;
-  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  color: #c18243;
+  background: url(../images/parentheses.svg) center/cover;
 }
 
-.cookie_intro div > span {
-  position: relative;
-  display: block;
-  width: 108px;
-  line-height: 66px;
-  height: 66px;
-  font-size: 21px;
-  color: #c18243;
-  background: url(../images/parentheses_center.svg) no-repeat;
-}
-.cookie_intro div > span::before {
-  position: absolute;
-  content: "";
-  width: 14px;
-  height: 66px;
-  left: -14px;
-  top: 0;
-  background: url(../images/parentheses_side.svg) no-repeat;
-}
-.cookie_intro div > span::after {
-  position: absolute;
-  content: "";
-  width: 14px;
-  height: 66px;
-  right: -14px;
-  top: 0;
-  background: url(../images/parentheses_side.svg) no-repeat;
-  transform: scaleX(-1);
-}
-.cookie_intro > div > p {
-  position: absolute;
-  left: -8px;
-  top: 6px;
-  width: 124px;
-  height: 54px;
-}
-.cookie_intro div:hover > span {
+.cookie_intro span:hover,
+.cookie_intro span.cookieon {
   color: #fff;
   font-weight: 800;
-}
-.cookie_intro div:hover > p {
-  background: #493220;
+  background: url(../images/parentheses2.svg) center/cover;
 }
 .cookie_img {
-  width: 800px;
-  height: 550px;
+  width: 802px;
+  height: 514px;
   margin: 0 auto;
   text-align: center;
-  /* display: flex;
-  justify-content: space-between; */
   position: relative;
 }
 #cookie_intro_frame {
-  width: 800px;
-  height: 485px;
-  overflow: hidden;
+  width: 760px;
+  height: 475px;
   margin: 0 auto;
   position: relative;
+  top: 20px;
+  text-align: center;
+  overflow: hidden;
 }
 #cookie_intro_frame > ul {
   position: absolute;
   left: 0;
   top: 0;
   transition: 0.5s ease-out;
+  display: flex;
 }
 #cookie_intro_frame > ul li img {
   width: 760px;
 }
-#cookie_intro_frame .frame {
-  width: 800px;
-  height: 485px;
-  background: url(../images/frame.png) center / 800px 485px;
+.frame {
+  width: 802px;
+  height: 514px;
+  background: url(../images/frame.png) center / 802px 514px;
   position: absolute;
   left: 0;
   top: 0;
@@ -403,7 +372,7 @@ aside.navercafe img {
 
 .prev {
   position: absolute;
-  left: 150px;
+  left: -100px;
   top: 225px;
   width: 52px;
   cursor: pointer;
@@ -414,7 +383,7 @@ aside.navercafe img {
 }
 .next {
   position: absolute;
-  right: 150px;
+  right: -100px;
   top: 225px;
   width: 52px;
   cursor: pointer;
@@ -438,16 +407,17 @@ aside.navercafe img {
   display: flex;
   justify-content: space-between;
 }
-.stud ul li {
+.stud ul li.dot {
   display: inline-block;
   width: 6px;
   height: 6px;
   border-radius: 50%;
+  margin: 20px auto;
   background: #c08d55;
-  transition: width 0.1s ease-in-out;
+  transition: width 500ms ease-in-out;
+  cursor: pointer;
 }
-.dotactive,
-.stud ul li:hover {
+.stud ul li.dotactive {
   width: 38px;
   height: 6px;
   border-radius: 2px;

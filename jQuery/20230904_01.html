@@ -192,8 +192,63 @@
             <ul>
               <li>
                 <ul>
+                  <li><a href="#">서브메뉴3</a></li>
+                  <li><a href="#">서브메뉴3</a></li>
+                  <li><a href="#">서브메뉴3</a></li>
                   <li><a href="#">서브메뉴1</a></li>
                   <li><a href="#">서브메뉴1</a></li>
+                  <li><a href="#">서브메뉴1</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">서브메뉴2</a></li>
+                  <li><a href="#">서브메뉴2</a></li>
+                  <li><a href="#">서브메뉴2</a></li>
+                  <li><a href="#">서브메뉴2</a></li>
+                  <li><a href="#">서브메뉴2</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">서브메뉴3</a></li>
+                  <li><a href="#">서브메뉴3</a></li>
+                  <li><a href="#">서브메뉴3</a></li>
+                  <li><a href="#">서브메뉴3</a></li>
+                  <li><a href="#">서브메뉴3</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">서브메뉴4</a></li>
+                  <li><a href="#">서브메뉴4</a></li>
+                  <li><a href="#">서브메뉴4</a></li>
+                  <li><a href="#">서브메뉴4</a></li>
+                  <li><a href="#">서브메뉴4</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">서브메뉴5</a></li>
+                  <li><a href="#">서브메뉴5</a></li>
+                  <li><a href="#">서브메뉴5</a></li>
+                  <li><a href="#">서브메뉴5</a></li>
+                  <li><a href="#">서브메뉴5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="submenu">
+          <div class="lnb">
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">서브메뉴4</a></li>
+                  <li><a href="#">서브메뉴4</a></li>
+                  <li><a href="#">서브메뉴4</a></li>
+                  <li><a href="#">서브메뉴4</a></li>
+                  <li><a href="#">서브메뉴4</a></li>
                   <li><a href="#">서브메뉴1</a></li>
                   <li><a href="#">서브메뉴1</a></li>
                   <li><a href="#">서브메뉴1</a></li>
@@ -244,64 +299,9 @@
             <ul>
               <li>
                 <ul>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li><a href="#">서브메뉴2</a></li>
-                  <li><a href="#">서브메뉴2</a></li>
-                  <li><a href="#">서브메뉴2</a></li>
-                  <li><a href="#">서브메뉴2</a></li>
-                  <li><a href="#">서브메뉴2</a></li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li><a href="#">서브메뉴3</a></li>
-                  <li><a href="#">서브메뉴3</a></li>
-                  <li><a href="#">서브메뉴3</a></li>
-                  <li><a href="#">서브메뉴3</a></li>
-                  <li><a href="#">서브메뉴3</a></li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li><a href="#">서브메뉴4</a></li>
-                  <li><a href="#">서브메뉴4</a></li>
-                  <li><a href="#">서브메뉴4</a></li>
-                  <li><a href="#">서브메뉴4</a></li>
-                  <li><a href="#">서브메뉴4</a></li>
-                </ul>
-              </li>
-              <li>
-                <ul>
                   <li><a href="#">서브메뉴5</a></li>
                   <li><a href="#">서브메뉴5</a></li>
                   <li><a href="#">서브메뉴5</a></li>
-                  <li><a href="#">서브메뉴5</a></li>
-                  <li><a href="#">서브메뉴5</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="submenu">
-          <div class="lnb">
-            <ul>
-              <li>
-                <ul>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
-                  <li><a href="#">서브메뉴1</a></li>
                   <li><a href="#">서브메뉴1</a></li>
                   <li><a href="#">서브메뉴1</a></li>
                   <li><a href="#">서브메뉴1</a></li>
@@ -354,19 +354,22 @@
     <script>
       $(function () {
         $(".submenu").css({ display: "none" });
-        $(".menu ul li,.submenu").hover(
-          function () {
-            let i = $(this).index();
-            console.log(i);
-            $(".submenu").eq(i).siblings().css({ display: "none" });
-            $(".submenu").eq(i).stop().slideDown();
-            $(".menu ul li").eq(i).find("a").addClass("on");
-          },
-          function () {
+        let status = true;
+        $(".menu ul li").click(function (e) {
+          e.preventDefault();
+          let i = $(this).index();
+          if ($(this).find("a").hasClass("on")) {
+            //          if ($(".menu ul li").hasClass("on"))
             $(".submenu").stop().slideUp();
             $(".menu ul li a").removeClass("on");
+          } else {
+            $(".submenu").eq(i).siblings().css({ display: "none" });
+            $(".submenu").eq(i).stop().slideDown();
+            $(".menu ul li a").removeClass("on");
+            $(".menu ul li").eq(i).find("a").addClass("on");
           }
-        );
+          status = !status;
+        });
       });
     </script>
   </body>

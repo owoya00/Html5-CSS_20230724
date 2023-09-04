@@ -2,6 +2,7 @@ let slideani = document.getElementById("cookie_intro_frame");
 let slides = document.querySelector(".slides");
 let slideImg = document.querySelectorAll(".slides li");
 let dots = document.querySelectorAll(".dot");
+let introactive = document.querySelectorAll(".cookie_intro span");
 let currentIdx = 0;
 let slideCount = slideImg.length;
 console.log(slideCount);
@@ -23,15 +24,15 @@ function initfunction() {
 }
 function showSlide(n) {
   for (i = 0; i < slideImg.length; i++) {
-    dots[i].className = dots[i].className.replace("dotactive", "");
+    dots[i].className = dots[i].className.replace("dotactive", " ");
   }
   dots[n].className += "dotactive";
   slides.style.left = -(n + 1) * slideWidth + "px";
   slides.style.transition = "0.5s";
 }
-function currentSlide(n) {
++function currentSlide(n) {
   showSlide((currentIdx = n));
-}
+};
 next.onclick = function () {
   if (currentIdx <= slideCount - 1) {
     //슬라이드이동
@@ -49,9 +50,14 @@ next.onclick = function () {
   }
   currentIdx += 1;
   for (i = 0; i < slideImg.length; i++) {
-    dots[i].className = dots[i].className.replace("dotactive", "");
+    dots[i].className = dots[i].className.replace("dotactive", " ");
+    introactive[i].className = introactive[i].className.replace(
+      "cookieon",
+      " "
+    );
   }
   dots[currentIdx].className += "dotactive";
+  introactive[currentIdx].className += "cookieon";
 };
 prev.onclick = function () {
   //이전 버튼 눌렀을때
