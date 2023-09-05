@@ -181,6 +181,7 @@ a {
   position: fixed;
   top: 40px;
   background: #000000b3;
+  z-index: 1;
 }
 .menubar_align {
   width: 1280px;
