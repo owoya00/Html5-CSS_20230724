@@ -1,17 +1,5 @@
 @charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-#wrap {
-  min-width: 1280px;
-}
+
 .information3 {
   width: 100%;
   background: url(../images/gameStoryBackground.webp);
@@ -38,38 +26,74 @@ a {
 
 .story_img_acter {
   position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  animation: acterMove 5s linear infinite both;
 }
-.story_img_acter::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  transition: none;
-  background: url(../images/frontCloud.webp);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: top;
-  opacity: 1;
+@keyframes acterMove {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
-.story_img_acter::before {
-  content: "";
-  display: block;
+
+.story_img_acter img:first-child {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  left: 10%;
+  bottom: 100px;
+  transform: translate(-10%, -100px);
+}
+
+.story_img_acter img:nth-child(2) {
+  position: absolute;
+  left: 30%;
   bottom: 50px;
-  left: 0;
-  transition: none;
-  background: url(../images/frontCloud.webp);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: top;
-  opacity: 0.5;
+  transform: translate(-30%, -50px);
+}
+.story_img_acter img:nth-child(3) {
+  position: absolute;
+  left: 75%;
+  bottom: 65px;
+  transform: translate(-75%, -65px);
+}
+
+.story_img_acter img:nth-child(4) {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translate(-50%, -50px);
+}
+.story_img_acter img:last-child {
+  position: absolute;
+  left: 95%;
+  bottom: 250px;
+  transform: translate(-95%, -250px);
+}
+.story_bg1 {
+  width: 100%;
+}
+.story_bg1 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.story_bg2 {
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+}
+.story_bg2 img {
+  width: 100%;
+  object-fit: cover;
 }

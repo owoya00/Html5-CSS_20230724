@@ -1,17 +1,4 @@
 @charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-#wrap {
-  min-width: 1280px;
-}
 
 .information2 {
   width: 100%;
@@ -38,7 +25,7 @@ a {
   background: url(../images/parentheses3.svg) center/contain no-repeat;
 }
 .cookie_kind li:hover,
-.cookieON {
+.cookON {
   color: #594d46;
   font-weight: 800;
   background: url(../images/parentheses4.svg) center/contain no-repeat;
