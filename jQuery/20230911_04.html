@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrap {
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
+      }
+      .wrap .big {
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .wrap .big img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .gallery {
+        text-align: center;
+      }
+
+      .gallery li {
+        display: inline-block;
+      }
+      .gallery li a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+      /* .gallery img {
+        width: 100px;
+        border: 2px solid#ccc;
+        object-fit: cover;
+      } */
+
+      .gallery li a.on {
+        background-color: #fc0;
+      }
+      .btn {
+        cursor: pointer;
+      }
+      .prev {
+        position: absolute;
+        top: 250px;
+        left: 300px;
+        text-align: center;
+      }
+      .prev p {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-right: 10px solid#000;
+        border-bottom: 10px solid transparent;
+      }
+      .next {
+        position: absolute;
+        top: 250px;
+        right: 300px;
+        text-align: center;
+      }
+      .next p {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 10px solid#000;
+        border-bottom: 10px solid transparent;
+      }
+    </style>
+    <script>
+      $(function () {
+        $(".gallery li").eq(0).find("a").addClass("on");
+        function myfnc(a, b) {
+          a.attr("src", b)
+            .css("opacity", "0")
+            .stop()
+            .animate({ opacity: "1" }, 500);
+        }
+        let j = 1;
+        function silde() {
+          if (j < 6) {
+            j++;
+          } else {
+            j = 1;
+          }
+          let bigimg = $(".big img");
+          let smallimg = "images/milk" + j + ".jpg";
+          myfnc(bigimg, smallimg);
+          $(".gallery li a").removeClass();
+          $(".gallery li")
+            .eq(j - 1)
+            .find("a")
+            .addClass("on");
+        }
+        let interval = setInterval(function () {
+          silde();
+        }, 1000);
+
+        $(".wrap").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(function () {
+              silde();
+            }, 1000);
+          }
+        );
+        $(".gallery li a").click(function (e) {
+          e.preventDefault();
+          let i = $(this).parent().index();
+          console.log(i);
+          let bigimg = $(".big img");
+          let smallimg = "images/milk" + (i + 1) + ".jpg";
+          myfnc(bigimg, smallimg);
+          $(".gallery li a").removeClass("on");
+          $(this).addClass("on");
+        });
+        $(".next").click(function () {
+          silde();
+        });
+
+        function silde_prev() {
+          if (j > 1) {
+            j--;
+          } else {
+            j = 6;
+          }
+          let bigimg = $(".big img");
+          let smallimg = "images/milk" + j + ".jpg";
+          myfnc(bigimg, smallimg);
+          $(".gallery li a").removeClass();
+          $(".gallery li")
+            .eq(j - 1)
+            .find("a")
+            .addClass("on");
+        }
+        $(".prev").click(function () {
+          silde_prev();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="big"><img src="images/milk11.jpg" alt="" /></div>
+      <ul class="gallery">
+        <li>
+          <a href="#"></a>
+        </li>
+        <li>
+          <a href="#"></a>
+        </li>
+        <li>
+          <a href="#"></a>
+        </li>
+        <li>
+          <a href="#"></a>
+        </li>
+        <li>
+          <a href="#"></a>
+        </li>
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+      <ul class="btn">
+        <li class="prev">
+          <p></p>
+          이전
+        </li>
+        <li class="next">
+          <p></p>
+          다음
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
