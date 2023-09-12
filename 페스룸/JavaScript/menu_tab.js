@@ -45,3 +45,9 @@ btn.forEach(function (item, keys) {
     this.style.color = "red";
   };
 });
+$(function () {
+  $(window).scroll(function () {
+    let ht = $(window).scrollTop();
+    console.log(ht);
+  });
+});

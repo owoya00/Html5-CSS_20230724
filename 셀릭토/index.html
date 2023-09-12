@@ -16,12 +16,15 @@
     />
 
     <title>SELECTO COFFEE</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <div id="wrap">
       <header>
         <div class="top">
-          <div class="logo"><img src="images/logo.png" alt="logo" /></div>
+          <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+          </div>
           <nav>
             <div class="topmenu">
               <ul class="gnb">
@@ -105,20 +108,16 @@
           <div class="pop_meun">
             <ul>
               <li><a href="#">main</a></li>
-              <li><a href="#">menu</a></li>
+              <li><a href="#MAIN_MENU">menu</a></li>
               <li>
-                <a href="#">new&events</a>
+                <a href="#NEW_EVENTS">new&events</a>
               </li>
-              <li><a href="#">창업문의</a></li>
+              <li><a href="#VENTURE">창업문의</a></li>
             </ul>
           </div>
         </div>
         <div class="main">
           <div class="left">
-            <input type="radio" name="product" id="product1" checked />
-            <input type="radio" name="product" id="product2" />
-            <input type="radio" name="product" id="product3" />
-            <input type="radio" name="product" id="product4" />
             <div class="main_visual">
               <ul class="visual">
                 <li>
@@ -134,166 +133,191 @@
                   <img src="images/c-cookie-bg.png" alt="cookie" />
                 </li>
               </ul>
-              <ul class="probtn">
-                <li>
-                  <h1>selecto menu</h1>
-                </li>
-                <li><label for="product1">signature</label></li>
-                <li><label for="product2">beverage</label></li>
-                <li><label for="product3">coffee</label></li>
-                <li><label for="product4">cookie</label></li>
-              </ul>
+              <div id="MAIN_MENU" class="probtn">
+                <h1>selecto menu</h1>
+                <ul>
+                  <li>signature</li>
+                  <li>beverage</li>
+                  <li>coffee</li>
+                  <li>cookie</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="center">
             <ul>
               <li><img src="images/c-signature-item-00.png" alt="item" /></li>
-              <!-- <li><img src="images/c-beverage-item-00.png" alt="item" /></li>
+              <li><img src="images/c-beverage-item-00.png" alt="item" /></li>
               <li><img src="images/c-coffee-item-00.png" alt="item" /></li>
-              <li><img src="images/c-cookie-item-00.png" alt="item" /></li> -->
+              <li><img src="images/c-cookie-item-00.png" alt="item" /></li>
             </ul>
           </div>
           <div class="right">
-            <ul>
-              <li><h1>signature</h1></li>
-              <li>
-                <p>
-                  셀렉토 감성과 재미를 듬뿍 담아 낸, 셀렉토에서<br />
-                  맛볼 수 있는 시그니처 음료
-                </p>
-              </li>
-              <li>
-                <ul class="item">
-                  <li>
-                    <img src="images/c-signature-item-01.png" alt="item" />
-                  </li>
-                  <li>
-                    <img src="images/c-signature-item-02-1.png" alt="item" />
-                  </li>
-                  <li>
-                    <img src="images/c-signature-item-03-1.png" alt="item" />
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span>추천 토핑류</span>
-                <ul class="topping">
-                  <li>
-                    <img src="images/c-topping-01.png" alt="topping" />
-                    <p>시럽 바닐라빈</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-02.png" alt="topping" />
-                    <p>시럽 카라멜</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-03.png" alt="topping" />
-                    <p>우유 오트밀</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-04.png" alt="topping" />
-                    <p>크림 흑임자</p>
-                  </li>
-                </ul>
-              </li>
-              <!--
-              <li><h1>beverage</h1></li>
-              <li>
-                <p>
-                  고객의 라이프 스타일에 맞춰 더욱 다양하게<br />
-                  즐길 수 있는 셀렉토의 음료 라인업!
-                </p>
-              </li>
-              <li>
-                <ul class="item">
-                  <li><img src="images/c-beverage-item-01.png" alt="item" /></li>
-                  <li><img src="images/c-beverage-item-02.png" alt="item" /></li>
-                  <li><img src="images/c-beverage-item-03.png" alt="item" /></li>
-                </ul>
-              </li>
-              <li>
-                <span>추천 토핑류</span>
-                <ul class="topping">
-                  <li>
-                    <img src="images/c-topping-02.png" alt="topping" />
-                    <p>시럽 카라멜</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-03.png" alt="topping" />
-                    <p>우유 오트밀</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-04.png" alt="topping" />
-                    <p>크림 흑임자</p>
-                  </li>
-                </ul>
-              </li>
-        
-              <li><h1>coffee</h1></li>
-              <li>
-                <p>
-                  셀렉토는 품질 좋은 원두를 선별해, 최적의 로스팅 포인트로<br />
-                  더욱 섬세하게 균형잡힌 풍미의 커피를 고객에게 선사합니다.
-                </p>
-              </li>
-              <li>
-                <ul class="item">
-                  <li><img src="images/c-coffee-item-01.png" alt="item" /></li>
-                  <li><img src="images/c-coffee-item-02.png" alt="item" /></li>
-                  <li><img src="images/c-coffee-item-03.png" alt="item" /></li>
-                </ul>
-              </li>
-              <li>
-                <span>추천 토핑류</span>
-                <ul class="topping">
-                  <li>
-                    <img src="images/c-topping-03.png" alt="topping" />
-                    <p>우유 오트밀</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-04.png" alt="topping" />
-                    <p>크림 흑임자</p>
-                  </li>
-                </ul>
-              </li>
-        
-              <li><h1>cookie</h1></li>
-              <li>
-                <p>남녀노소, 어디서나 맛있게! 셀렉토 시그니처 수제 쿠키</p>
-              </li>
-              <li>
-                <ul class="item">
-                  <li><img src="images/c-cookie-item-01.png" alt="item" /></li>
-                  <li><img src="images/c-cookie-item-02.png" alt="item" /></li>
-                  <li><img src="images/c-cookie-item-03.png" alt="item" /></li>
-                </ul>
-              </li>
-              <li>
-                <span>추천 토핑류</span>
-                <ul class="topping">
-                  <li>
-                    <img src="images/c-topping-01.png" alt="topping" />
-                    <p>시럽 바닐라빈</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-02.png" alt="topping" />
-                    <p>시럽 카라멜</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-03.png" alt="topping" />
-                    <p>우유 오트밀</p>
-                  </li>
-                  <li>
-                    <img src="images/c-topping-04.png" alt="topping" />
-                    <p>크림 흑임자</p>
-                  </li>
-                </ul>
-              </li>
-               -->
-            </ul>
+            <div class="right_inner">
+              <ul>
+                <li><h1>signature</h1></li>
+                <li>
+                  <p>
+                    셀렉토 감성과 재미를 듬뿍 담아 낸, 셀렉토에서<br />
+                    맛볼 수 있는 시그니처 음료
+                  </p>
+                </li>
+                <li>
+                  <ul class="item">
+                    <li>
+                      <img src="images/c-signature-item-01.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-signature-item-02-1.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-signature-item-03-1.png" alt="item" />
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>추천 토핑류</span>
+                  <ul class="topping">
+                    <li>
+                      <!-- <img src="images/c-topping-01.png" alt="topping" /> -->
+                      <p>시럽 바닐라빈</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-02.png" alt="topping" /> -->
+                      <p>시럽 카라멜</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-03.png" alt="topping" /> -->
+                      <p>우유 오트밀</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-04.png" alt="topping" /> -->
+                      <p>크림 흑임자</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!--시그니처-->
+              <ul>
+                <!--beverage-->
+                <li><h1>beverage</h1></li>
+                <li>
+                  <p>
+                    고객의 라이프 스타일에 맞춰 더욱 다양하게<br />
+                    즐길 수 있는 셀렉토의 음료 라인업!
+                  </p>
+                </li>
+                <li>
+                  <ul class="item">
+                    <li>
+                      <img src="images/c-beverage-item-01.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-beverage-item-02.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-beverage-item-03.png" alt="item" />
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>추천 토핑류</span>
+                  <ul class="topping">
+                    <li>
+                      <!-- <img src="images/c-topping-02.png" alt="topping" /> -->
+                      <p>시럽 카라멜</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-03.png" alt="topping" /> -->
+                      <p>우유 오트밀</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-04.png" alt="topping" /> -->
+                      <p>크림 흑임자</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+                <!--coffee-->
+                <li><h1>coffee</h1></li>
+                <li>
+                  <p>
+                    셀렉토는 품질 좋은 원두를 선별해, 최적의 로스팅 포인트로<br />
+                    더욱 섬세하게 균형잡힌 풍미의 커피를 고객에게 선사합니다.
+                  </p>
+                </li>
+                <li>
+                  <ul class="item">
+                    <li>
+                      <img src="images/c-coffee-item-01.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-coffee-item-02.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-coffee-item-03.png" alt="item" />
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>추천 토핑류</span>
+                  <ul class="topping">
+                    <li>
+                      <!-- <img src="images/c-topping-03.png" alt="topping" /> -->
+                      <p>우유 오트밀</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-04.png" alt="topping" /> -->
+                      <p>크림 흑임자</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+                <li><h1>cookie</h1></li>
+                <li>
+                  <p>남녀노소, 어디서나 맛있게! 셀렉토 시그니처 수제 쿠키</p>
+                </li>
+                <li>
+                  <ul class="item">
+                    <li>
+                      <img src="images/c-cookie-item-01.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-cookie-item-02.png" alt="item" />
+                    </li>
+                    <li>
+                      <img src="images/c-cookie-item-03.png" alt="item" />
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>추천 토핑류</span>
+                  <ul class="topping">
+                    <li>
+                      <!-- <img src="images/c-topping-01.png" alt="topping" /> -->
+                      <p>시럽 바닐라빈</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-02.png" alt="topping" /> -->
+                      <p>시럽 카라멜</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-03.png" alt="topping" /> -->
+                      <p>우유 오트밀</p>
+                    </li>
+                    <li>
+                      <!-- <img src="images/c-topping-04.png" alt="topping" /> -->
+                      <p>크림 흑임자</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="board">
+        <div id="NEW_EVENTS" class="board">
           <h1>NEWS& EVENTS</h1>
           <div class="news">
             <div class="notice">
@@ -370,7 +394,7 @@
           </div>
         </div>
 
-        <div class="venture">
+        <div id="VENTURE" class="venture">
           <ul>
             <li>
               <div class="rect_box">
@@ -455,6 +479,6 @@
         </div>
       </footer>
     </div>
-    <script src="JavaScript/side.js"></script>
+    <script src="js/side.js"></script>
   </body>
 </html>

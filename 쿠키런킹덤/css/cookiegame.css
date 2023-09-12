@@ -41,8 +41,8 @@
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 0;
+  top: 0;
 }
 
 .game_character_img > li {

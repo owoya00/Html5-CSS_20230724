@@ -144,7 +144,7 @@ nav {
 }
 .gnb li {
   white-space: nowrap;
-  z-index: 10;
+  z-index: 11;
 }
 .gnb li a {
   color: #fff;
@@ -288,20 +288,28 @@ section.menu_tab {
   padding: 10px;
   text-align: center;
 }
+.pro_img > a {
+  margin: 0 auto;
+  color: #000;
+}
 .pro_img a > p {
+  width: 100%;
   font-size: 20px;
   font-weight: 800;
-  text-align: left;
+  text-align: center;
   margin: 20px 0;
+  white-space: nowrap;
 }
 .pro_img a > img {
   width: 300px;
 }
 .pro_img > p {
+  width: 80%;
+  margin: 0 auto;
   font-size: 14px;
   margin-bottom: 10px;
   text-align: left;
-  white-space: nowrap;
+  white-space: wrap;
 }
 .price {
   width: 420px;

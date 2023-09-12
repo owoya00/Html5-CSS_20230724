@@ -233,7 +233,8 @@ nav {
   text-align: center;
   cursor: pointer;
 }
-.light_btn li:hover {
+.light_btn li:hover,
+.light_btn li.on {
   background: url(../images/btn_el_on.png) center/contain no-repeat;
 }
 .light_btn li a {
@@ -248,7 +249,8 @@ nav {
   background: url(../images/btn_el_01.png) center/contain no-repeat;
 }
 
-.light_btn li:hover a {
+.light_btn li:hover a,
+.light_btn li a.on {
   color: #e83200;
 }
 .light_btn li:nth-child(8) {

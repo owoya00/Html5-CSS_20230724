@@ -1,4 +1,4 @@
-let slideani = document.getElementById("cookie_intro_frame");
+let slideani = document.getElementById("outer");
 let slides = document.querySelector(".slides");
 let slideImg = document.querySelectorAll(".slides li");
 let dots = document.querySelectorAll(".dot");
@@ -95,4 +95,36 @@ slideani.addEventListener("mouseenter", function () {
 });
 slideani.addEventListener("mouseleave", function () {
   slide_start();
+});
+$(function () {
+  $(".acter_info,.cookie_move li,.cookie_info li").css("display", "none");
+  $(".acter_info").eq(0).css("display", "flex");
+  $(".cookie_move li").eq(0).css("display", "block");
+  $(".cookie_info li").eq(0).css("display", "block");
+  $(".cookie_kind li").click(function () {
+    let i = $(this).index();
+    $(".acter_info").css("display", "none");
+    $(".acter_info").eq(i).css("display", "flex");
+    $(".acter_info")
+      .eq(i)
+      .find(".cookie_move li:first")
+      .css("display", "block");
+    $(".acter_info")
+      .eq(i)
+      .find(".cookie_info li:first")
+      .css("display", "block");
+  });
+  $("ul.game_character_img li").click(function () {
+    let n = $(this).parent().parent().index();
+    let i = $(this).index();
+    console.log("n" + n + "i" + i);
+    $(".acter_info:eq(n)").find(".cookie_move li").css("display", "none");
+    $(".acter_info:eq(n)")
+      .find(".cookie_move li:eq(i)")
+      .css("display", "block");
+    $(".acter_info:eq(n)").find(".cookie_move li").css("display", "none");
+    $(".acter_info:eq(n)")
+      .find(".cookie_info li:eq(i)")
+      .css("display", "block");
+  });
 });
