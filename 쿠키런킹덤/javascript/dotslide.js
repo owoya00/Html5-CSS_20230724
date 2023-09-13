@@ -103,6 +103,8 @@ $(function () {
   $(".cookie_info li").eq(0).css("display", "block");
   $(".cookie_kind li").click(function () {
     let i = $(this).index();
+    $(".cookie_kind li").removeClass("on");
+    $(this).addClass("on");
     $(".acter_info").css("display", "none");
     $(".acter_info").eq(i).css("display", "flex");
     $(".acter_info")
@@ -118,13 +120,27 @@ $(function () {
     let n = $(this).parent().parent().index();
     let i = $(this).index();
     console.log("n" + n + "i" + i);
-    $(".acter_info:eq(n)").find(".cookie_move li").css("display", "none");
-    $(".acter_info:eq(n)")
-      .find(".cookie_move li:eq(i)")
+    $(".acter_info").eq(n).find(".cookie_move li").css("display", "none");
+    $(".acter_info")
+      .eq(n)
+      .find(".cookie_move li")
+      .eq(i)
       .css("display", "block");
-    $(".acter_info:eq(n)").find(".cookie_move li").css("display", "none");
-    $(".acter_info:eq(n)")
-      .find(".cookie_info li:eq(i)")
+    $(".acter_info").eq(n).find(".cookie_info li").css("display", "none");
+    $(".acter_info")
+      .eq(n)
+      .find(".cookie_info li")
+      .eq(i)
       .css("display", "block");
+  });
+  $(".Music_video").css("display", "none");
+  $(".cookie_mv li").click(function (e) {
+    e.preventDefault();
+    let i = $(this).index();
+    $(".Music_video").css("display", "none");
+    $(".more_video ul li").eq(i).css("display", "block");
+  });
+  $(".cookie_vd").click(function () {
+    $(this).parent().css({ display: "none" });
   });
 });

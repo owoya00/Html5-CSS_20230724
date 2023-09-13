@@ -6,87 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
+      .box {
+        width: 350px;
       }
-      li {
-        list-style: none;
+      .boxIn {
+        padding: 20px;
       }
-      .kind_wrap {
-        border: 2px solid black;
-        width: 1000px;
-        margin: 0 auto;
-        position: relative;
+      .boxIn h3 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
       }
-      .kind_wrap > .kind_slider {
-        width: 760px;
-        margin: 10px auto;
-        text-align: center;
+      .boxIn ul {
+        height: 25px;
         overflow: hidden;
       }
-      .kind_wrap > .kind_slider .slider {
-        position: relative;
-
-        transition: 0.5s;
+      .boxIn ul li {
       }
-      .kind_wrap > .kind_slider .slider li {
-        float: left;
+      .boxIn ul li a {
+        display: block;
+        font-size: 13px;
+        line-height: 2em;
       }
-      .kind_wrap > .kind_slider img {
-        width: 760px;
-        vertical-align: center;
+      .boxIn ul li:first-child a {
+        font-size: 18px;
+        line-height: 1.4em;
+        font-weight: bold;
       }
-      .frame {
-        width: 1000px;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-      .frame img {
-        width: 100%;
-        object-fit: cover;
-      }
-      .kind_wrap .arrow > div.prev {
-        position: absolute;
-        left: -150px;
-        top: 100px;
-      }
-      .kind_wrap .arrow > div.next {
-        position: absolute;
-        right: -150px;
-        top: 100px;
-        transform: scaleX(-1);
+      .boxIn ul li:nth-child(2) a {
+        font-size: 16px;
+        line-height: 1.4em;
+        margin-top: 4px;
       }
     </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      setInterval(function () {
+        /* setInterval 시작 */
+        var boxIn = $(".boxIn ul"); /* boxIn 변수에 .boxIn ul 요소 저장 */
+
+        var boxRow =
+          $(
+            ".boxIn ul li:first"
+          ); /* boxRow 변수에 첫번째 .boxIn ul li 요소 저장  */
+
+        var ARea = function () {
+          /* ARea 변수에 함수 저장 */
+          boxRow
+            .appendTo(boxIn)
+            .show(
+              300
+            ); /* boxRow 요소를 boxIn 요소 마지막에 추가하며 show 메서드 적용합니다. */
+        };
+
+        $(boxRow).hide(
+          300,
+          ARea
+        ); /* boxRow 요소가 300ms로 숨겨지고나면 변수 ARea에 저장 된 콜백 함수가 실행됩니다. */
+      }, 3000); /* setInterval 이 3초마다 실행됩니다. */
+    </script>
   </head>
   <body>
-    <div class="kind_wrap">
-      <div class="kind_slider">
-        <ul class="slider">
-          <li>
-            <img src="cookimg/gameContents_ko1.jpg" alt="" />
-          </li>
-          <li>
-            <img src="cookimg/gameContents_ko2.jpg" alt="" />
-          </li>
-          <li>
-            <img src="cookimg/gameContents_ko3.jpg" alt="" />
-          </li>
-          <li>
-            <img src="cookimg/gameContents_ko4.jpg" alt="" />
-          </li>
-          <li>
-            <img src="cookimg/gameContents_ko5.jpg" alt="" />
-          </li>
+    <div class="box">
+      <div class="boxIn">
+        <h3>Hot Keyword</h3>
+        <ul>
+          <li><a href="#">1. 리스트</a></li>
+          <li><a href="#">2. 리스트</a></li>
+          <li><a href="#">3. 리스트</a></li>
+          <li><a href="#">4. 리스트</a></li>
+          <li><a href="#">5. 리스트</a></li>
+          <li><a href="#">6. 리스트</a></li>
         </ul>
-        <div class="frame"><img src="cookimg/frame.png" alt="" /></div>
-      </div>
-      <div class="arrow">
-        <div class="prev"><img src="cookimg/arrow2.png" alt="" /></div>
-        <div class="next"><img src="cookimg/arrow2.png" alt="" /></div>
       </div>
     </div>
-    <script></script>
   </body>
 </html>

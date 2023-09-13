@@ -224,7 +224,8 @@ nav {
   z-index: 99;
 }
 
-.light_btn li {
+.light_btn li,
+.light_btn_updown li {
   width: 72px;
   height: 40px;
   background: url(../images/btn_el_off.png) center/contain no-repeat;
@@ -240,11 +241,7 @@ nav {
 .light_btn li a {
   color: #333;
 }
-.light_btn li:first-child {
-  height: 22px;
-  background: url(../images/btn_el_01.png) center/contain no-repeat;
-}
-.light_btn li:first-child:hover {
+.light_btn_top li:first-child {
   height: 22px;
   background: url(../images/btn_el_01.png) center/contain no-repeat;
 }
@@ -253,27 +250,23 @@ nav {
 .light_btn li a.on {
   color: #e83200;
 }
-.light_btn li:nth-child(8) {
+.light_btn_updown li:first-child {
   height: 41px;
   background: url(../images/btn_el_up.png) center/contain no-repeat;
 }
-.light_btn li:nth-child(9) {
+.light_btn_updown li:nth-child(2) {
   height: 40px;
   background: url(../images/btn_el_down.png) center/contain no-repeat;
 }
-.light_btn li:nth-child(8):hover {
+.light_btn_updown li:first-child:hover {
   height: 41px;
   background: url(../images/btn_el_up_on.png) center/contain no-repeat;
 }
-.light_btn li:nth-child(9):hover {
+.light_btn_updown li:nth-child(2):hover {
   height: 40px;
   background: url(../images/btn_el_down_on.png) center/contain no-repeat;
 }
-.light_btn li:last-child {
-  height: 16px;
-  background: url(../images/btn_el_02.png) center/contain no-repeat;
-}
-.light_btn li:last-child:hover {
+.light_btn_bottom li {
   height: 16px;
   background: url(../images/btn_el_02.png) center/contain no-repeat;
 }

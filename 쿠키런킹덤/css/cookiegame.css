@@ -25,7 +25,8 @@
   background: url(../images/parentheses3.svg) center/contain no-repeat;
 }
 .cookie_kind li:hover,
-.cookON {
+.cookON,
+.cookie_kind li.on {
   color: #594d46;
   font-weight: 800;
   background: url(../images/parentheses4.svg) center/contain no-repeat;

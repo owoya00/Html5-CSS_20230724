@@ -236,6 +236,7 @@ section.main_top {
   background: #222;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 .lush_value_list li img {
@@ -246,4 +247,7 @@ section.main_top {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.lush_value_list li.on {
+  background: none;
 }
