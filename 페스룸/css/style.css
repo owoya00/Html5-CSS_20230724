@@ -188,15 +188,17 @@ nav {
 .main_body img {
   width: 100%;
 }
-.full_img {
+#full_img {
   position: absolute;
   left: 71px;
   top: 67px;
   width: 1145px;
   height: 508px;
-  animation: main_body_ani 50s infinite both;
+  overflow: hidden;
+
+  /* animation: main_body_ani 50s infinite both; */
 }
-@keyframes main_body_ani {
+/* @keyframes main_body_ani {
   0% {
     background: url(../images/main_body_ani1.gif) center/cover;
   }
@@ -215,7 +217,22 @@ nav {
   100% {
     background: url(../images/main_body_ani6.gif) center/cover;
   }
+} */
+#full_img .full_img_data {
+  width: 600%;
+  /* position: relative; */
+  /* display: flex; */
 }
+#full_img .full_img_data li {
+  float: left;
+}
+#full_img .full_img_data img {
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+  width: 1145px;
+}
+
 .main_light_btn {
   width: 72px;
   position: fixed;
@@ -426,16 +443,16 @@ nav {
   margin: 3px 20px;
   background: #fff;
   white-space: nowrap;
-  animation: room_move 30s infinite linear both alternate;
+  /* animation: room_move 30s infinite linear both alternate; */
 }
-@keyframes room_move {
+/* @keyframes room_move {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-1000px);
   }
-}
+} */
 .room_right ul li p {
   margin-top: 10px;
   color: #333;

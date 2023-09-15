@@ -1,0 +1,72 @@
+:root {
+  --mask-size: 50px;
+  --mask-x: -25px;
+  --mask-y: -25px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.main .page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.main .page .inner {
+  position: relative;
+}
+.main .page .innerCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+.main .page h2 {
+  font-size: 72px;
+  line-height: 1;
+}
+.main .page p {
+  font-size: 36px;
+  margin-top: 40px;
+}
+.main .page .bgLayer {
+  background: url(../images/main-img01.jpg) center/cover;
+  color: #fff;
+}
+.main .page .bgLayer .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(241deg, #f77706, #f5c45a);
+  opacity: 0.8;
+}
+.main .page .maskLayer {
+  background: url(../images/main-img01.jpg) center/cover;
+  color: #ffad25;
+  clip-path: circle(var(--mask-size) at var(--mask-x) var(--mask-y));
+}
+.hoverLayer {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 400px;
+  /* background: #000; */
+}

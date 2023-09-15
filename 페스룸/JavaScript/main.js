@@ -1,8 +1,17 @@
 // header 애니메이션 롤링
-$(function () {});
-
-// 엘레베이터 버튼
+//자동슬라이드 베너
 $(function () {
+  setInterval(function () {
+    $(".full_img_data").animate({ marginLeft: "-100%" }, 1000, function () {
+      $(".full_img_data li").eq(0).appendTo(".full_img_data");
+      $(".full_img_data").css({ marginLeft: "0" });
+    });
+  }, 8000);
+
+  //상품 자동슬라이드
+
+  // 엘레베이터 버튼
+
   $(".light_btn li").eq(0).addClass("on");
   $(".light_btn li").eq(0).find("a").addClass("on");
   let arr = [

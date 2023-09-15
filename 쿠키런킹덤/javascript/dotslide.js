@@ -96,6 +96,7 @@ slideani.addEventListener("mouseenter", function () {
 slideani.addEventListener("mouseleave", function () {
   slide_start();
 });
+
 $(function () {
   $(".acter_info,.cookie_move li,.cookie_info li").css("display", "none");
   $(".acter_info").eq(0).css("display", "flex");
