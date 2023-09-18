@@ -17,7 +17,7 @@ pro[0].style.display = "block";
 console.log(ht);
 //console.log("ht : " + ht);
 document.querySelector(".product").style.height = ht[0] + "px";
-
+btn[0].style.color = "red";
 content.style.backgroundImage = "url(images2/slide1.gif)";
 btn.forEach(function (item, keys) {
   //console.log("item :" + item + "\n" + "keys : " + keys);
@@ -37,6 +37,7 @@ btn.forEach(function (item, keys) {
     pro[j].style.display = "block";
     // console.log("j : " + j);
     content.style.backgroundImage = "url(images2/slide" + (j + 1) + ".gif)";
+
     let otherItem = Array.from(btn).filter(others);
     otherItem.forEach(function (item) {
       item.style.color = "#000";

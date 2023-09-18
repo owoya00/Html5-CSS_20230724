@@ -10,6 +10,17 @@ $(function () {
 
   //상품 자동슬라이드
 
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      speed: 1000,
+    },
+  });
+  // If we need pagination
+
   // 엘레베이터 버튼
 
   $(".light_btn li").eq(0).addClass("on");
@@ -98,5 +109,74 @@ $(function () {
         }
       }
     });
+  });
+  //popup창 하루안보기
+
+  var myPopup = document.querySelector(".popupbox"),
+    checkbox = document.querySelector("#popup"),
+    popupClose = document.querySelector(".close");
+  //쿠키생성
+  function setCookie(name, value, day) {
+    var date = new Date(); //현재 날짜 지정
+
+    date.setDate(date.getDate() + day);
+    var mycookie = "";
+    mycookie += name + "=" + value + ";";
+    mycookie += "Expires=" + date.toUTCString();
+    document.cookie = mycookie; // 새로운 쿠키 설정, 생성
+  }
+
+  //쿠키 삭제
+
+  function delCookie(name) {
+    var date = new Date();
+
+    date.setDate(date.getDate() - 1);
+
+    var setCookie = "";
+
+    setCookie += name + "=Main;";
+    setCookie += "Expires=" + date.toUTCString();
+
+    document.cookie = setCookie;
+  }
+
+  //쿠키 확인
+
+  function checkCookie(name) {
+    var cookies = document.cookie.split(";");
+    console.log(cookies);
+    var visited = false; //방문 거짓
+
+    for (var i in cookies) {
+      if (cookies[i].indexOf(name) > -1) {
+        visited = true;
+        console.log(visited);
+      }
+    }
+
+    console.log(visited);
+    if (visited) {
+      // visited == true 생략 (재방문)
+      myPopup.style.display = "none";
+    } else {
+      //신규방문
+      myPopup.style.display = "block";
+    }
+  }
+
+  checkCookie("pethroom.com");
+
+  popupClose.addEventListener("click", function () {
+    //a.checked ture false
+    if (checkbox.checked) {
+      //팝업을 다시 안보겠다. 팝업 닫고, 쿠키생성
+      setCookie("pethroom.com", "Main", 1);
+      myPopup.style.display = "none";
+    } else {
+      //팝업을 계속 본다. 팝업 닫고, 쿠키제거
+      myPopup.style.display = "none";
+      delCookie("pethroom.com");
+    }
   });
 });
