@@ -55,13 +55,14 @@ a {
   color: #fff;
   margin-bottom: 20px;
 }
-.head .phrase img {
+.head .appstore a img {
   width: 200px;
   height: 60px;
   object-fit: contain;
   border: 1px solid#fff;
   margin-right: 15px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .head .phrase img:hover {
   background: rgba(0, 0, 0, 0.5);
@@ -85,7 +86,6 @@ a {
   color: #333;
   position: relative;
   right: 20px;
-  display: none;
 }
 
 .QR_info {
@@ -114,6 +114,9 @@ a {
   border-top: 10px solid transparent;
   border-left: 10px solid#fff;
   border-bottom: 10px solid transparent;
+}
+.Xbox {
+  cursor: pointer;
 }
 .Xbox img {
   position: absolute;
@@ -164,31 +167,45 @@ footer {
   line-spacing: 3px;
 }
 .foot .foot_left {
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
   color: #fff;
 }
 .foot .foot_left ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .foot .foot_left ul li {
   font-weight: 500;
+}
+.foot .foot_left ul li:first-child {
+  width: 190px;
 }
 .foot .foot_left ul li > span {
   font-size: 18px;
   font-weight: 800;
 }
-.foot .foot_left ul > li:first-child img {
-  width: 120px;
+
+.foot .foot_left ul > li > a img {
+  width: 150px;
   object-fit: cover;
   border: 1px solid#fff;
   margin-top: 10px;
+  cursor: pointer;
 }
+
 .foot .foot_left ul li a {
   font-size: 14px;
   font-weight: 800;
   color: #fff;
+}
+.foot .foot_left ul li:nth-child(2) a img {
+  width: 16px;
+  border: none;
+  object-fit: cover;
+}
+.foot .foot_left ul li:nth-child(2) a:last-child:hover {
+  color: #a7a7a7;
 }
 .foot .foot_right {
   width: 55%;
@@ -207,7 +224,7 @@ footer {
   display: flex;
   justify-content: start;
 }
-.foot .foot_right ul > li ul > li img {
+.foot .foot_right ul > li ul > li > a img {
   margin-top: 30px;
   margin-right: 10px;
 }

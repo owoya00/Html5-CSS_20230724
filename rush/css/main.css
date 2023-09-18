@@ -63,20 +63,19 @@ section.main_top {
   background: #fff;
 }
 .lush_info {
-  margin: 50px auto;
+  width: 1280px;
+  margin: 100px auto;
+  overflow: hidden;
 }
 .lush_info ul {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  position: sticky;
   display: flex;
   justify-content: flex-start;
   text-align: left;
-  overflow: hidden;
 }
 .lush_info ul li {
   width: 450px;
-  margin-right: 50px;
   position: relative;
 }
 
@@ -102,10 +101,10 @@ section.main_top {
 .lush_info ul li > a h3 {
   width: 80%;
   position: absolute;
-  left: 50%;
+  left: 25px;
   bottom: 300px;
-  transform: translatex(-50%);
   font-size: 36px;
+  white-space: wrap;
   color: #fff;
   opacity: 0;
   transition: 0.5s;
@@ -118,6 +117,12 @@ section.main_top {
   line-height: 50px;
   font-weight: 800;
 }
+
+.lush_info ul li > a > p {
+  width: 400px;
+  white-space: wrap;
+}
+
 .donation {
   width: 1280px;
   margin: 0 auto;
