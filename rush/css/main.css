@@ -160,9 +160,15 @@ section.main_top {
   color: #fff;
 }
 
+.swiper-slide {
+  margin-bottom: 20px;
+}
+.swiper-notification {
+  margin-bottom: 100px;
+}
 .store_find {
   width: 1280px;
-  margin: 0 auto;
+  margin: 100px auto;
   display: flex;
   justify-content: center;
 }

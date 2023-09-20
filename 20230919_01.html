@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul#navi {
+        width: 200px;
+        margin: 0 auto;
+        text-indent: 10px;
+      }
+      ul#navi > li {
+        margin-bottom: 3px;
+      }
+      div.title {
+        height: 35px;
+        line-height: 35px;
+        background: #ccc;
+        cursor: pointer;
+      }
+      div.title:hover,
+      div.title.on {
+        background: #8ac007;
+      }
+      .sub li {
+        height: 35px;
+        line-height: 35px;
+        background: #f4f4f4;
+        cursor: pointer;
+      }
+      .sub li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .sub li a:hover {
+        background: #cf0;
+      }
+    </style>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //step1
+        //$(".sub").css("display", "none");
+        /*  $(".sub").hide();
+        $(".title").click(function () {
+          $(".sub").css("display", "none");
+          $(this).next().show();
+          $(".title").removeClass("on");
+          $(this).addClass("on");
+        });*/
+        //step2
+        /* $(".sub").hide();
+        $(".title").click(function () {
+          if ($(this).next().css("display") == "none") {
+            $(".sub").slideUp();
+          }
+          $(this).next().slideToggle();
+          $(".title").removeClass("on");
+          $(this).addClass("on");
+        });*/
+        //step3
+        /*$(".sub").hide();
+        $(".title").click(function () {
+          $(".sub").each(function () {
+            if ($(this).css("display") == "block") {
+              $(this).slideUp();
+            }
+          });
+          $(this).next().slideDown();
+        });*/
+        //step4
+        /* $(".sub").hide();
+        $(".title").click(function () {
+          if ($(this).hasClass("on") == false) {
+            $(".sub").slideUp();
+            $(this).next().slideDown();
+            $(".title").removeClass("on");
+            $(this).addClass("on");
+          } else {
+            $(this).next().slideUp();
+            $(this).removeClass("on");
+          }
+        });*/
+        //step5
+        $(".sub").hide();
+        let current;
+        $(".title").click(function () {
+          if ($(this).hasClass("on") == false) {
+            $(".sub").slideUp();
+            $(this).next().slideDown();
+            $(".title").removeClass("on");
+            $(this).addClass("on");
+          } else {
+            $(this).removeClass("on");
+            $(this).next().slideUp();
+          }
+        });
+        function init(n) {
+          current = n;
+          setTimeout(function () {
+            $("#navi>li").eq(current).find(".sub").slideDown();
+            $("#navi>li").eq(current).find(".title").addClass("on");
+          }, 1000);
+        }
+        init(2);
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="navi">
+      <li>
+        <div class="title">title</div>
+        <ul class="sub">
+          <li><a href="#">sub1</a></li>
+          <li><a href="#">sub2</a></li>
+          <li><a href="#">sub3</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="title">title</div>
+        <ul class="sub">
+          <li><a href="#">sub1</a></li>
+          <li><a href="#">sub2</a></li>
+          <li><a href="#">sub3</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="title">title</div>
+        <ul class="sub">
+          <li><a href="#">sub1</a></li>
+          <li><a href="#">sub2</a></li>
+          <li><a href="#">sub3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

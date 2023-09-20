@@ -96,7 +96,6 @@ slideani.addEventListener("mouseenter", function () {
 slideani.addEventListener("mouseleave", function () {
   slide_start();
 });
-
 $(function () {
   $(".acter_info,.cookie_move li,.cookie_info li").css("display", "none");
   $(".acter_info").eq(0).css("display", "flex");
@@ -143,5 +142,130 @@ $(function () {
   });
   $(".cookie_vd").click(function () {
     $(this).parent().css({ display: "none" });
+  });
+  $(".cookie_kind li").eq(0).addClass("on");
+  $(".hero .cooki_arrow img:first").click(function () {
+    $(".hero .cookie_move li").each(function (index) {
+      if ($(this).css("display") == "block") {
+        let i = $(this).index();
+
+        if (i == 0) {
+          return false;
+        } else {
+          i--;
+          console.log(i);
+          $(".hero .game_character_img li").eq(i).trigger("click");
+        }
+      }
+    });
+  });
+  $(".hero .cooki_arrow img:last").click(function () {
+    $(".hero .cookie_move li").each(function (index) {
+      if ($(this).css("display") == "block") {
+        let i = $(this).index();
+
+        if (i == 5) {
+          return false;
+        } else {
+          i++;
+          console.log(i);
+          $(".hero .game_character_img li").eq(i).trigger("click");
+          return false;
+        }
+      }
+    });
+  });
+  $(".bravery .cooki_arrow img:first").click(function () {
+    $(".bravery .cookie_move li").each(function (index) {
+      if ($(this).css("display") == "block") {
+        let i = $(this).index();
+
+        if (i == 0) {
+          return false;
+        } else {
+          i--;
+          console.log(i);
+          $(".bravery .game_character_img li").eq(i).trigger("click");
+        }
+      }
+    });
+  });
+  $(".bravery .cooki_arrow img:last").click(function () {
+    $(".bravery .cookie_move li").each(function (index) {
+      if ($(this).css("display") == "block") {
+        let i = $(this).index();
+
+        if (i == 5) {
+          return false;
+        } else {
+          i++;
+          console.log(i);
+          $(".bravery .game_character_img li").eq(i).trigger("click");
+          return false;
+        }
+      }
+    });
+  });
+  $(".legend .cooki_arrow img:first").click(function () {
+    $(".legend .cookie_move li").each(function (index) {
+      if ($(this).css("display") == "block") {
+        let i = $(this).index();
+
+        if (i == 0) {
+          return false;
+        } else {
+          i--;
+          console.log(i);
+          $(".legend .game_character_img li").eq(i).trigger("click");
+        }
+      }
+    });
+  });
+  $(".legend .cooki_arrow img:last").click(function () {
+    $(".legend .cookie_move li").each(function (index) {
+      if ($(this).css("display") == "block") {
+        let i = $(this).index();
+
+        if (i == 5) {
+          return false;
+        } else {
+          i++;
+          console.log(i);
+          $(".legend .game_character_img li").eq(i).trigger("click");
+          return false;
+        }
+      }
+    });
+  });
+  $(".villain .cooki_arrow img:first").click(function () {
+    $(".villain .cookie_move li").each(function (index) {
+      if ($(this).css("display") == "block") {
+        let i = $(this).index();
+
+        if (i == 0) {
+          return false;
+        } else {
+          i--;
+          console.log(i);
+          $(".villain .game_character_img li").eq(i).trigger("click");
+        }
+      }
+    });
+  });
+  $(".villain .cooki_arrow img:last").click(function () {
+    $(".villain .cookie_move li").each(function (index) {
+      if ($(this).css("display") == "block") {
+        let i = $(this).index();
+
+        if (i == 5) {
+          return false;
+        } else {
+          i++;
+          console.log(i);
+          $(".villain .game_character_img li").eq(i).trigger("click");
+          return false;
+        }
+      }
+    });
   });
 });
