@@ -17,8 +17,10 @@ $(function () {
     loop: true,
     autoplay: {
       speed: 1000,
+      pauseOnMouseEnter: true,
     },
   });
+
   // If we need pagination
 
   // 엘레베이터 버튼

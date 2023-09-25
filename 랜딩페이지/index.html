@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      #wrap {
+        min-width: 1280px;
+      }
+      .home {
+        width: 1280px;
+        margin: 100px auto;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+      }
+      .home > img {
+        width: 960px;
+      }
+      .home > img:nth-child(2) {
+        width: 960px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+      .home:hover > img:nth-child(1) {
+        opacity: 0;
+      }
+      .home:hover > img:nth-child(2) {
+        display: block;
+      }
+      .star {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .star a > img {
+        width: 80px;
+      }
+      .star a > p {
+        font-size: 32px;
+        color: yellow;
+        text-transform: capitalize;
+        animation: starmove 5s infinite linear;
+      }
+      @keyframes starmove {
+        0% {
+          transform: translateY(0px);
+        }
+        25% {
+          transform: translateY(5px);
+        }
+        50% {
+          transform: translateY(0px);
+        }
+        75% {
+          transform: translateY(-5px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="home">
+        <img src="images/door1.svg" alt="door1" />
+        <img src="images/door2.svg" alt="door2" />
+        <div class="star">
+          <a href="home.html">
+            <img src="images/star/star1.svg" alt="star1" />
+            <p>▲<br />click</p>
+          </a>
+        </div>
+      </div>
+      <script>
+        $(function () {
+          $(".star").css({ display: "none" });
+          $(".home").hover(
+            function () {
+              $(".star").css({ display: "block" });
+            },
+            function () {
+              $(".star").css({ display: "none" });
+            }
+          );
+        });
+      </script>
+    </div>
+  </body>
+</html>

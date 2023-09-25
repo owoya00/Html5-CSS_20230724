@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+  </head>
+  <style>
+    .head ul li:last-child a {
+      color: #c1e4e7;
+    }
+
+    .main_contact {
+      width: 100%;
+      height: 90vh;
+      position: relative;
+    }
+    .Contact_talk {
+      width: 1280px;
+      margin: 0 auto;
+      text-align: center;
+      cursor: pointer;
+    }
+    .Contact_talk img {
+      width: 1000px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .Contact_talk img:nth-child(2) {
+      width: 300px;
+      top: 275px;
+    }
+    .Contact_talk > span {
+      font-size: 75px;
+      color: yellow;
+      position: absolute;
+      left: 50%;
+      top: 720px;
+      transform: translate(-50%, 0);
+    }
+
+    .HP,
+    .Mail {
+      width: 350px;
+      height: 150px;
+      padding-top: 50px;
+      padding-left: 50px;
+      border-radius: 30px;
+      background: yellow;
+      font-size: 40px;
+    }
+    .HP {
+      position: absolute;
+      left: 5%;
+      top: 30px;
+    }
+    .HP::after {
+      content: "";
+      position: absolute;
+      left: 370px;
+      top: 155px;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 35px solid#ff0;
+    }
+    .Mail {
+      position: absolute;
+      right: 5%;
+      bottom: 30px;
+    }
+    .Mail::after {
+      content: "";
+      position: absolute;
+      right: 370px;
+      top: 10px;
+      border-top: 35px solid#ff0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+    }
+    .Mail p {
+      font-size: 28px;
+      text-transform: lowercase;
+    }
+    .ClickVeiw {
+      position: absolute;
+      left: 50%;
+      bottom: 50px;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+    .ClickVeiw p:first-child {
+      text-align: center;
+      color: #62b6cc;
+      font-size: 30px;
+      animation: resumemove 1s infinite both;
+    }
+    @keyframes resumemove {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .ClickVeiw p:last-child {
+      width: 250px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      background: #62b6cc;
+      border-radius: 15px;
+      font-size: 24px;
+      font-weight: 800;
+      text-transform: capitalize;
+      color: #fff;
+    }
+    .ClickVeiw:hover p:first-child {
+      color: #c1e4e7;
+    }
+    .ClickVeiw:hover p:last-child {
+      background: #c1e4e7;
+      color: #184965;
+    }
+  </style>
+  <body>
+    <div id="warp">
+      <header>
+        <div class="head">
+          <a href="index.html">
+            <div class="logo"><img src="images/logo.png" alt="logo" /></div>
+          </a>
+          <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">portfolio</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="main_contact">
+        <div class="Contact_talk">
+          <img src="images/contact.png" alt="contact" />
+          <img src="images/kakao_openchat.png" alt="kakao_openchat" />
+          <span>openkakao talk</span>
+        </div>
+        <div class="call">
+          <div class="HP">
+            <span>phone</span>
+            <p>010 3848 0257</p>
+          </div>
+          <div class="Mail">
+            <span>e-mail</span>
+            <p>owoya00@gmail.com</p>
+          </div>
+        </div>
+        <div class="ClickVeiw">
+          <p>▲</p>
+          <p>click</p>
+        </div>
+      </div>
+
+      <script>
+        $(function () {
+          $(".call").css({ display: "none" });
+          let status = true;
+          $(".ClickVeiw").click(function () {
+            if (status) {
+              $(".call").css({ display: "block" });
+              $(".Contact_talk img").eq(1).css({ display: "none" });
+              $(".Contact_talk span").css({ display: "none" });
+            } else {
+              $(".call").css({ display: "none" });
+              $(".Contact_talk img").eq(1).css({ display: "block" });
+              $(".Contact_talk span").css({ display: "block" });
+            }
+            status = !status;
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

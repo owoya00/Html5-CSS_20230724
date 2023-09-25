@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PNB 풍년제과 공식홈페이지</title>
+
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -84,7 +90,7 @@
             </ul>
           </div>
         </div>
-        <div class="Search">
+        <!-- <div class="Search">
           <div class="search_btn">
             <p class="ICON"><img src="images/icon1.png" alt="icon1" /></p>
             <input
@@ -94,21 +100,21 @@
               onfocus="this.placeholder=''"
             />
           </div>
-        </div>
+        </div> -->
       </header>
       <section>
         <div class="banner">
-          <ul class="banner_img">
-            <li>
+          <ul class="banner_img owl-carousel owl-theme">
+            <li class="item">
               <a href="#"><img src="images/mainImg1.jpg" alt="mainImg1" /></a>
             </li>
-            <li>
+            <li class="item">
               <a href="#"><img src="images/mainImg2.jpg" alt="mainImg2" /></a>
             </li>
-            <li>
+            <li class="item">
               <a href="#"><img src="images/mainImg3.jpg" alt="mainImg3" /></a>
             </li>
-            <li>
+            <li class="item">
               <a href="#"><img src="images/mainImg4.jpg" alt="mainImg4" /></a>
             </li>
           </ul>
@@ -168,123 +174,125 @@
               베스트 상품만 모았다!<br />
               <span>금주의 MD추천 상품</span>
             </p>
-            <ul>
-              <li>
-                <a href="#"
-                  ><img src="images/best1.jpg" alt="best1" />
-                  <span>미니 초코파이 12개 세트</span>
-                  <p class="best_info">
-                    PNB의 베스트셀러 수제 초코파이 미니 세트, 다양하게
-                    즐겨보세요 PNB의 수제 초코파이는 2대 강현희 할아버지가
-                    개발하시고 전국의 빵 애호가들에게 한결같이 사랑받는 인기
-                    제과상품입니다.
-                  </p>
-                  <p>판매가: 21,600원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best2.jpg" alt="best2" />
-                  <span>초코파이 5개 세트</span>
-                  <p class="best_info">
-                    PNB의 베스트셀러, 수제 초코파이 PNB의 수제 초코파이는 2대
-                    강현희 할아버지가 개발하시고 전국의 빵 애호가들에게 한결같이
-                    사랑받는 인기 제과상품입니다.
-                  </p>
-                  <p>판매가: 11,500원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best3.jpg" alt="best3" />
-                  <span>전병 4개 세트</span>
-                  <p class="best_info">
-                    한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
-                    3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
-                  </p>
-                  <p>판매가: 37,000원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best4.jpg" alt="best4" />
-                  <span>땅콩전병</span>
-                  <p class="best_info">
-                    한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
-                    3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
-                  </p>
-                  <p>판매가: 10,000원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best5.jpg" alt="best5" />
-                  <span>전병(소) 4개 세트</span>
-                  <p class="best_info">
-                    한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
-                    3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
-                  </p>
-                  <p>판매가: 24,000원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best6.jpg" alt="best6" />
-                  <span>땅콩전병 3개 세트</span>
-                  <p class="best_info">
-                    한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
-                    3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
-                  </p>
-                  <p>판매가: 30,000원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best7.jpg" alt="best7" />
-                  <span>초코파이 10개 세트</span>
-                  <p class="best_info">
-                    PNB의 베스트셀러, 수제 초코파이 PNB의 수제 초코파이는 2대
-                    강현희 할아버지가 개발하시고 전국의 빵 애호가들에게 한결같이
-                    사랑받는 인기 제과상품입니다.
-                  </p>
-                  <p>판매가: 23,000원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best8.jpg" alt="best8" />
-                  <span>생강전병</span>
-                  <p class="best_info">
-                    한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
-                    3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
-                  </p>
-                  <p>판매가: 9,0000원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best9.jpg" alt="best9" />
-                  <span>화이트 초코파이 10개 세트</span>
-                  <p class="best_info">
-                    더 부드럽고 진한 코코아의 맛, 화이트 초코파이 더욱 진한
-                    최상의 코코아와 화이트 초콜렛이 만나 더욱 부드럽고 깊은 맛이
-                    특징입니다.
-                  </p>
-                  <p>판매가: 25,000원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/best10.jpg" alt="best10" />
-                  <span>깨전병</span>
-                  <p class="best_info">
-                    한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
-                    3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
-                  </p>
-                  <p>판매가: 9,000원</p>
-                </a>
-              </li>
-            </ul>
+            <div class="swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best1.jpg" alt="best1" />
+                    <span>미니 초코파이 12개 세트</span>
+                    <p class="best_info">
+                      PNB의 베스트셀러 수제 초코파이 미니 세트, 다양하게
+                      즐겨보세요 PNB의 수제 초코파이는 2대 강현희 할아버지가
+                      개발하시고 전국의 빵 애호가들에게 한결같이 사랑받는 인기
+                      제과상품입니다.
+                    </p>
+                    <p>판매가: 21,600원</p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best2.jpg" alt="best2" />
+                    <span>초코파이 5개 세트</span>
+                    <p class="best_info">
+                      PNB의 베스트셀러, 수제 초코파이 PNB의 수제 초코파이는 2대
+                      강현희 할아버지가 개발하시고 전국의 빵 애호가들에게
+                      한결같이 사랑받는 인기 제과상품입니다.
+                    </p>
+                    <p>판매가: 11,500원</p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best3.jpg" alt="best3" />
+                    <span>전병 4개 세트</span>
+                    <p class="best_info">
+                      한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
+                      3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
+                    </p>
+                    <p>판매가: 37,000원</p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best4.jpg" alt="best4" />
+                    <span>땅콩전병</span>
+                    <p class="best_info">
+                      한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
+                      3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
+                    </p>
+                    <p>판매가: 10,000원</p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best5.jpg" alt="best5" />
+                    <span>전병(소) 4개 세트</span>
+                    <p class="best_info">
+                      한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
+                      3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
+                    </p>
+                    <p>판매가: 24,000원</p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best6.jpg" alt="best6" />
+                    <span>땅콩전병 3개 세트</span>
+                    <p class="best_info">
+                      한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
+                      3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
+                    </p>
+                    <p>판매가: 30,000원</p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best7.jpg" alt="best7" />
+                    <span>초코파이 10개 세트</span>
+                    <p class="best_info">
+                      PNB의 베스트셀러, 수제 초코파이 PNB의 수제 초코파이는 2대
+                      강현희 할아버지가 개발하시고 전국의 빵 애호가들에게
+                      한결같이 사랑받는 인기 제과상품입니다.
+                    </p>
+                    <p>판매가: 23,000원</p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best8.jpg" alt="best8" />
+                    <span>생강전병</span>
+                    <p class="best_info">
+                      한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
+                      3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
+                    </p>
+                    <p>판매가: 9,0000원</p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#"
+                    ><img src="images/best9.jpg" alt="best9" />
+                    <span>화이트 초코파이 10개 세트</span>
+                    <p class="best_info">
+                      더 부드럽고 진한 코코아의 맛, 화이트 초코파이 더욱 진한
+                      최상의 코코아와 화이트 초콜렛이 만나 더욱 부드럽고 깊은
+                      맛이 특징입니다.
+                    </p>
+                    <p>판매가: 25,000원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/best10.jpg" alt="best10" />
+                    <span>깨전병</span>
+                    <p class="best_info">
+                      한국 최초의 제과, PNB 1951 오리지널 수제 전병 70년 동안
+                      3대째 전통의 맛을 계승하고 있는 PNB의 수제 전병입니다.
+                    </p>
+                    <p>판매가: 9,000원</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -454,6 +462,7 @@
           </ul>
         </div>
       </footer>
+      <script src="js/main.js"></script>
     </div>
   </body>
 </html>
