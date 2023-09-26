@@ -1,0 +1,102 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: #184965;
+  text-transform: uppercase;
+}
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #184965;
+}
+.head {
+  width: 90%;
+  margin: 0px auto;
+  border-bottom: 10px solid#5ba7d5;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.logo {
+  width: 150px;
+}
+.head .logo > img {
+  width: 150px;
+}
+.head ul {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.head ul li a {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 90px;
+  color: #62b6cc;
+}
+.head ul li:hover a {
+  color: #c1e4e7;
+}
+.head ul li:nth-child(3) a {
+  color: #c1e4e7;
+}
+.Project {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Project_left {
+  width: 25%;
+}
+.Project_left > span {
+  font-size: 48px;
+  line-height: 100px;
+  font-weight: 800;
+  color: #5ba7d5;
+}
+.Project_left > p {
+  font-size: 36px;
+  font-weight: 800;
+  color: #a1d1f1;
+}
+.project_Color > img {
+  width: 70%;
+  object-fit: cover;
+}
+.project_Tool > img {
+  width: 100%;
+}
+.Project_right {
+  width: 65%;
+}
+.Project_right img {
+  width: 100%;
+  object-fit: cover;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

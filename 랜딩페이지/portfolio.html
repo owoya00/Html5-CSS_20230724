@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/portfoliostyle.css" />
+
     <script src="js/jquery-3.7.1.min.js"></script>
-    <style>
-      .head ul li:nth-child(3) a {
-        color: #c1e4e7;
-      }
-    </style>
+    <script src="js/swiper-bundle.js"></script>
   </head>
   <body>
     <div id="warp">
@@ -28,6 +26,155 @@
           </ul>
         </div>
       </header>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="Project">
+              <div class="Project_left">
+                <span>project</span>
+                <p>selecto</p>
+                <span>color</span>
+                <div class="project_Color">
+                  <img src="images/star/star4.png" alt="star4" />
+                </div>
+                <span>tool</span>
+                <div class="project_Tool">
+                  <img src="images/program/program1.png" alt="program1" />
+                </div>
+              </div>
+              <div class="Project_right">
+                <img
+                  src="images/portfolio/portfolio1.png"
+                  alt="portfolio1.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Project">
+              <div class="Project_left">
+                <span>project</span>
+                <p>selecto</p>
+                <span>color</span>
+                <div class="project_Color">
+                  <img src="images/star/star5.png" alt="star4" />
+                </div>
+                <span>tool</span>
+                <div class="project_Tool">
+                  <img src="images/program/program1.png" alt="program1" />
+                </div>
+              </div>
+              <div class="Project_right">
+                <img
+                  src="images/portfolio/portfolio2.png"
+                  alt="portfolio2.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Project">
+              <div class="Project_left">
+                <span>project</span>
+                <p>selecto</p>
+                <span>color</span>
+                <div class="project_Color">
+                  <img src="images/star/star6.png" alt="star4" />
+                </div>
+                <span>tool</span>
+                <div class="project_Tool">
+                  <img src="images/program/program1.png" alt="program1" />
+                </div>
+              </div>
+              <div class="Project_right">
+                <img
+                  src="images/portfolio/portfolio3.png"
+                  alt="portfolio3.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Project">
+              <div class="Project_left">
+                <span>project</span>
+                <p>selecto</p>
+                <span>color</span>
+                <div class="project_Color">
+                  <img src="images/star/star7.png" alt="star4" />
+                </div>
+                <span>tool</span>
+                <div class="project_Tool">
+                  <img src="images/program/program2.png" alt="program2" />
+                </div>
+              </div>
+              <div class="Project_right">
+                <img
+                  src="images/portfolio/portfolio4.png"
+                  alt="portfolio4.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Project">
+              <div class="Project_left">
+                <span>project</span>
+                <p>selecto</p>
+                <span>color</span>
+                <div class="project_Color">
+                  <img src="images/star/star8.png" alt="star4" />
+                </div>
+                <span>tool</span>
+                <div class="project_Tool">
+                  <img src="images/program/program1.png" alt="program1" />
+                </div>
+              </div>
+              <div class="Project_right">
+                <img
+                  src="images/portfolio/portfolio5.png"
+                  alt="portfolio5.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Project">
+              <div class="Project_left">
+                <span>project</span>
+                <p>selecto</p>
+                <span>color</span>
+                <div class="project_Color">
+                  <img src="images/star/star9.png" alt="star4" />
+                </div>
+                <span>tool</span>
+                <div class="project_Tool">
+                  <img src="images/program/program2.png" alt="program2" />
+                </div>
+              </div>
+              <div class="Project_right">
+                <img
+                  src="images/portfolio/portfolio6.png"
+                  alt="portfolio6.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
