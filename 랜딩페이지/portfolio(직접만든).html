@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/portfoliostyle.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="head">
+          <a href="index.html">
+            <div class="logo"><img src="images/logo.png" alt="logo" /></div>
+          </a>
+          <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="Portfolio_info">
+        <div class="Project">
+          <div class="Project_left">
+            <span>project</span>
+            <p>selecto</p>
+            <span>color</span>
+            <div class="project_Color">
+              <img src="images/star/star4.png" alt="star4" />
+            </div>
+            <span>tool</span>
+            <div class="project_Tool">
+              <img src="images/program/program1.png" alt="program1" />
+            </div>
+          </div>
+          <div class="Project_right">
+            <img src="images/portfolio/portfolio1.png" alt="portfolio1.png" />
+          </div>
+        </div>
+        <div class="Project">
+          <div class="Project_left">
+            <span>project</span>
+            <p>selecto</p>
+            <span>color</span>
+            <div class="project_Color">
+              <img src="images/star/star5.png" alt="star4" />
+            </div>
+            <span>tool</span>
+            <div class="project_Tool">
+              <img src="images/program/program1.png" alt="program1" />
+            </div>
+          </div>
+          <div class="Project_right">
+            <img src="images/portfolio/portfolio2.png" alt="portfolio2.png" />
+          </div>
+        </div>
+
+        <div class="Project">
+          <div class="Project_left">
+            <span>project</span>
+            <p>selecto</p>
+            <span>color</span>
+            <div class="project_Color">
+              <img src="images/star/star6.png" alt="star4" />
+            </div>
+            <span>tool</span>
+            <div class="project_Tool">
+              <img src="images/program/program1.png" alt="program1" />
+            </div>
+          </div>
+          <div class="Project_right">
+            <img src="images/portfolio/portfolio3.png" alt="portfolio3.png" />
+          </div>
+        </div>
+
+        <div class="Project">
+          <div class="Project_left">
+            <span>project</span>
+            <p>selecto</p>
+            <span>color</span>
+            <div class="project_Color">
+              <img src="images/star/star7.png" alt="star4" />
+            </div>
+            <span>tool</span>
+            <div class="project_Tool">
+              <img src="images/program/program2.png" alt="program2" />
+            </div>
+          </div>
+          <div class="Project_right">
+            <img src="images/portfolio/portfolio4.png" alt="portfolio4.png" />
+          </div>
+        </div>
+
+        <div class="Project">
+          <div class="Project_left">
+            <span>project</span>
+            <p>selecto</p>
+            <span>color</span>
+            <div class="project_Color">
+              <img src="images/star/star8.png" alt="star4" />
+            </div>
+            <span>tool</span>
+            <div class="project_Tool">
+              <img src="images/program/program1.png" alt="program1" />
+            </div>
+          </div>
+          <div class="Project_right">
+            <img src="images/portfolio/portfolio5.png" alt="portfolio5.png" />
+          </div>
+        </div>
+
+        <div class="Project">
+          <div class="Project_left">
+            <span>project</span>
+            <p>selecto</p>
+            <span>color</span>
+            <div class="project_Color">
+              <img src="images/star/star9.png" alt="star4" />
+            </div>
+            <span>tool</span>
+            <div class="project_Tool">
+              <img src="images/program/program2.png" alt="program2" />
+            </div>
+          </div>
+          <div class="Project_right">
+            <img src="images/portfolio/portfolio6.png" alt="portfolio6.png" />
+          </div>
+        </div>
+
+        <div class="dot"></div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        let el = $(".Project");
+        $(el).each(function (index) {
+          $(this).on("mousewheel", function () {
+            console.log(event.wheelDelta);
+            let moveTop = $(window).scrollTop();
+            let eleseclector = $(el).eq(index);
+            if (event.wheelDelta < 0) {
+              if ($(eleseclector).next() != undefined) {
+                try {
+                  moveTop = $(eleseclector).next().offset().top;
+                } catch (e) {}
+              }
+            } else {
+              if ($(eleseclector).prev() != undefined) {
+                try {
+                  moveTop = $(eleseclector).prev().offset().top;
+                } catch (e) {}
+              }
+            }
+
+            $("html,body")
+              .stop()
+              .animate({ scrollTop: moveTop + "px" }, 500);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
