@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style type="text/css">
+    * {
+      font-family: 돋움, Dotum, AppleGothic, sans-serif;
+      font-size: 12px;
+      color: #333;
+    }
+    body,
+    form,
+    div,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    pre,
+    fieldset,
+    input,
+    blockquote,
+    th,
+    td {
+      margin: 0;
+      padding: 0;
+    }
+    ol,
+    ul,
+    dl {
+      list-style: none;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover,
+    a:hover b,
+    a:hover em,
+    a:hover span {
+      color: #06c;
+      text-decoration: underline;
+    }
+
+    /*rolling Button*/
+    div.rollBtn {
+      position: absolute;
+      z-index: 3;
+    }
+    div.rollBtn a.next {
+      background-position: -22px 0px;
+      cursor: hand;
+    }
+    div.rollBtn a.previous {
+      margin-right: 3px;
+      cursor: hand;
+    }
+    div.rollBtn a span {
+      display: none;
+    }
+
+    #bKey {
+      position: relative;
+      margin-top: 9px;
+      width: 270px;
+      zoom: 1;
+    }
+    #bKey .keyBg {
+      margin: 1px 0 0 0;
+      overflow: hidden;
+      height: 18px;
+    }
+    #bKey ul {
+      clear: both;
+    }
+    #bKey ul li {
+      float: left;
+      height: 18px;
+    }
+    #bKey ul li.x {
+      background: url(http://simg.paran.com/top_v2.2/top/ic_line06.gif) 100% 0
+        no-repeat;
+      margin: 0 7px 0 0;
+      padding: 0 7px 0 0;
+    }
+    #bKey ul li a {
+      font-weight: bold;
+      color: #fb6a31;
+      letter-spacing: -1px;
+    }
+    #bKey .rollBtn {
+      left: 203px;
+      top: 0;
+    }
+    #bKey .rollBtn .up {
+      margin-right: 3px;
+    }
+  </style>
+  <script language="JavaScript">
+    function scrolling(objId, sec1, sec2, speed, height) {
+      this.objId = objId;
+      this.sec1 = sec1;
+      this.sec2 = sec2;
+      this.speed = speed;
+      this.height = height;
+      this.h = 0;
+      this.div = document.getElementById(this.objId);
+      this.htmltxt = this.div.innerHTML;
+      this.div.innerHTML = this.htmltxt + this.htmltxt;
+      this.div.isover = false;
+      this.div.onmouseover = function () {
+        this.isover = true;
+      };
+      this.div.onmouseout = function () {
+        this.isover = false;
+      };
+      var self = this;
+      this.div.scrollTop = 0;
+      window.setTimeout(function () {
+        self.play();
+      }, this.sec1);
+    }
+    scrolling.prototype = {
+      play: function () {
+        var self = this;
+        if (!this.div.isover) {
+          this.div.scrollTop += this.speed;
+          if (this.div.scrollTop > this.div.scrollHeight / 2) {
+            this.div.scrollTop = 0;
+          } else {
+            this.h += this.speed;
+            if (this.h >= this.height) {
+              if (
+                this.h > this.height ||
+                this.div.scrollTop % this.height != 0
+              ) {
+                this.div.scrollTop -= this.h % this.height;
+              }
+              this.h = 0;
+              window.setTimeout(function () {
+                self.play();
+              }, this.sec1);
+              return;
+            }
+          }
+        }
+        window.setTimeout(function () {
+          self.play();
+        }, this.sec2);
+      },
+      prev: function () {
+        if (this.div.scrollTop == 0)
+          this.div.scrollTop = this.div.scrollHeight / 2;
+        this.div.scrollTop -= this.height;
+      },
+      next: function () {
+        if (this.div.scrollTop == this.div.scrollHeight / 2)
+          this.div.scrollTop = 0;
+        this.div.scrollTop += this.height;
+      },
+    };
+  </script>
+  <body>
+    <div id="bKey">
+      <div id="jFavList" class="keyBg">
+        <ul>
+          <li class="x">
+            <a href="#">부시 8월 방한</a>
+          </li>
+          <li><a href="#">우리 구단 가입금</a></li>
+        </ul>
+        <ul>
+          <li class="x">
+            <a href="#">진보신당 난입 폭행</a>
+          </li>
+          <li><a href="#">남규리 대시</a></li>
+        </ul>
+
+        <ul>
+          <li class="x">
+            <a href="#">미국산 쇠고기 판매</a>
+          </li>
+          <li><a href="#">조중동 다음</a></li>
+        </ul>
+        <ul>
+          <li class="x">
+            <a href="#">호나우지뉴 방한</a>
+          </li>
+          <li><a href="#">김구라 사과</a></li>
+        </ul>
+        <ul>
+          <li class="x">
+            <a href="#">LPG가격 인상</a>
+          </li>
+          <li><a href="#">임창용 19세이브</a></li>
+        </ul>
+        <ul>
+          <li class="x">
+            <a href="#">한전 납품비리</a>
+          </li>
+          <li><a href="#">유재석 웨딩사진</a></li>
+        </ul>
+        <ul>
+          <li class="x">
+            <a href="#">채은정 비키니</a>
+          </li>
+
+          <li><a href="#">PD수첩 압수영장</a></li>
+        </ul>
+        <ul>
+          <li class="x">
+            <a href="#">신혼부부 주택</a>
+          </li>
+          <li><a href="#">사제단 시국미사</a></li>
+        </ul>
+      </div>
+      <script type="text/javascript">
+        var hotKeyword = new scrolling("jFavList", 3000, 1, 1, 18);
+      </script>
+
+      <div
+        class="rollBtn"
+        onmouseover="hotKeyword.div.isover=true;"
+        onmouseout="hotKeyword.div.isover=false;"
+      >
+        <a class="previous" onclick="hotKeyword.prev();" title="위로">[↑]</a>
+        <a class="next" onclick="hotKeyword.next();" title="아래로">[↓]</a>
+      </div>
+    </div>
+  </body>
+</html>
