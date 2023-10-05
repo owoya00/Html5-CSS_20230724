@@ -96,6 +96,14 @@ header {
 }
 .nav_left ul li {
   line-height: 45px;
+  font-weight: 600;
+}
+.nav_left ul li > a {
+  color: #333;
+}
+.nav_left ul li:last-child > a {
+  text-transform: uppercase;
+  color: #f00;
 }
 .nav_left ul li > a img {
   width: 35%;
@@ -107,15 +115,22 @@ header {
   display: flex;
   justify-content: flex-end;
 }
+.nav_right ul li > a {
+  line-height: 45px;
+  margin-right: 10px;
+}
 .nav_right ul li > a img {
-  width: 20px;
+  width: 25px;
+  vertical-align: middle;
+  object-fit: cover;
 }
 .search {
   width: 250px;
   line-height: 45px;
-  background: #333;
+  background: #000;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .search p {
   padding-left: 20px;
@@ -124,4 +139,13 @@ header {
 .search > img {
   width: 30px;
   padding-right: 20px;
+}
+.top_btn_on {
+  position: absolute;
+  right: 20px;
+  top: 4px;
+}
+.top_btn_on > img {
+  width: 30px;
+  display: none;
 }
