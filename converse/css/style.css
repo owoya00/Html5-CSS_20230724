@@ -1,4 +1,9 @@
 @charset "UTF-8";
+:root {
+  --mask-size: 50px;
+  --mask-x: -25px;
+  --mask-y: -25px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -435,26 +440,25 @@ header {
   width: 35px;
   margin: 10px;
 }
-body {
-  height: 3000pxS;
-}
-
-.main1 {
-  width: 80%;
-  height: 900px;
+section {
+  width: 76%;
   margin: 0 auto;
+}
+.main1 {
+  width: 100%;
+  height: 900px;
+  margin: 100px auto;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   position: relative;
-  top: 100px;
 }
-.main1_left {
+.main1_write {
   width: 50%;
   height: 900px;
   position: relative;
 }
-.main1_left_po {
+.main1_write_po {
   width: 100%;
   position: absolute;
   left: 50%;
@@ -462,13 +466,13 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.main1_left_po > h1 {
+.main1_write_po > h1 {
   font-size: 50px;
 }
-.main1_left_po > p {
+.main1_write_po > p {
   margin-top: 30px;
 }
-.main1_left_po > a {
+.main1_write_po > a {
   display: inline-block;
   margin-top: 100px;
   width: 200px;
@@ -479,11 +483,321 @@ body {
   font-weight: 800;
 }
 
-.main1_left_po > a:hover {
+.main1_write_po > a:hover {
   background: #777;
 }
 
-.main1_right {
+.main1_img {
   width: 50%;
   height: 900px;
+}
+.main1_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main2 {
+  width: 100%;
+  margin: 0 auto;
+}
+.main2 > h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.main2 > a {
+  font-size: 18px;
+  font-weight: 800;
+  color: #333;
+}
+.main2 > a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.main2 > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+.main2 > ul li {
+  width: calc(100% / 4);
+  margin-left: 15px;
+}
+
+.main2 > ul li a {
+  width: 295px;
+}
+
+.main2 > ul li a div {
+  width: 295px;
+  overflow: hidden;
+  position: relative;
+}
+
+.main2 > ul li a div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.main2 > ul li:hover a div::after {
+  opacity: 1;
+}
+
+.main2 > ul li a div img {
+  width: 295px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.main2 > ul li:hover a img {
+  transform: scale(1.5);
+}
+.main3 {
+  width: 100%;
+  height: 900px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.main3_img {
+  width: 50%;
+  height: 900px;
+}
+.main3_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main3_write {
+  width: 50%;
+  height: 900px;
+  background: #000;
+  position: relative;
+}
+.main3_write_po {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.main3_write_po > h1 {
+  font-size: 50px;
+  color: #fff;
+}
+.main3_write_po > p {
+  margin-top: 30px;
+  color: #fff;
+}
+.main3_write_po > a {
+  display: inline-block;
+  margin-top: 100px;
+  width: 200px;
+  line-height: 50px;
+  height: 50px;
+  background: #fff;
+  color: #000;
+  font-weight: 800;
+}
+
+.main3_write_po > a:hover {
+  background: #777;
+}
+.main4 {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  margin: 100px auto;
+}
+.main4_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main4_bg .page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1440px;
+  height: 900px;
+  text-align: center;
+}
+.main4_bg .page .inner {
+  position: relative;
+  top: 200px;
+  font-weight: 800;
+}
+.main4_bg .page .innerCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1440px;
+  height: 900px;
+}
+.main4_bg .page .bgLayer {
+  background: url(../images/main4.png) center/cover;
+  color: #fff;
+}
+.main4_bg .page .bgLayer .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(241deg, #a304a3, #0916c8);
+  opacity: 0.5;
+}
+.main4_bg .page .maskLayer {
+  background: url(../images/main4.png) center/cover;
+  color: #ffad25;
+  clip-path: circle(var(--mask-size) at var(--mask-x) var(--mask-y));
+}
+.hoverLayer {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 400px;
+  /* background: #000; */
+}
+.main4_write {
+  position: absolute;
+  left: 50%;
+  top: 700px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.main4_write > p {
+  color: #fff;
+  font-weight: 800;
+}
+.main4_write > a {
+  display: inline-block;
+  width: 180px;
+  height: 45px;
+  line-height: 45px;
+  margin-top: 20px;
+  font-weight: 800;
+  background: #fff;
+  color: #000;
+}
+.main4_write > a:hover {
+  background: #000;
+  color: #fff;
+}
+
+.main5 {
+  width: 100%;
+  display: flex;
+}
+.main5_img {
+  width: 50%;
+  height: 900px;
+}
+.main5_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main5_write {
+  width: 50%;
+  height: 900px;
+}
+.main5_write_top {
+  width: 100%;
+  height: 50%;
+  background: #000;
+  position: relative;
+}
+.main5_write_top_po {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center;
+}
+.main5_write_top_po > h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #fff;
+}
+.main5_write_top_po > p {
+  margin: 10px 0;
+  color: #fff;
+}
+.main5_write_top_po > a {
+  display: inline-block;
+  width: 180px;
+  height: 45px;
+  line-height: 45px;
+  background: #fff;
+  color: #000;
+  margin-top: 10px;
+}
+.main5_write_top_po > a:hover {
+  background: #777;
+  color: #fff;
+}
+
+.main5_write_bottom {
+  width: 100%;
+  height: 50%;
+}
+.main5_write_bottom > ul {
+  width: 100%;
+  height: 450px;
+  display: flex;
+}
+.main5_write_bottom > ul > li {
+  width: 50%;
+  height: 450px;
+  position: relative;
+}
+.prdImg {
+  position: relative;
+}
+.prdImg > img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  position: absolute;
+}
+.prdImg > img:last-of-type {
+  display: none;
+}
+.name {
+  position: absolute;
+  left: 20px;
+  top: 400px;
+}
+.hrart {
+  width: 40px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+.hrart > img {
+  width: 25px;
+  object-fit: cover;
+  position: absolute;
+}
+.hrart > img:last-of-type {
+  display: none;
 }
