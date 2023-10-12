@@ -59,9 +59,9 @@ $(function () {
   let y_current = -50;
   let masksize = 50;
   let size_current = 0;
-  let acc = 0.1;
+  let acc = 0.09;
   //acc 속도값
-  let acc2 = 0.1;
+  let acc2 = 0.09;
 
   $(document).mousemove(function (e) {
     x_posi = e.clientX;
@@ -80,6 +80,7 @@ $(function () {
       "--mask-y": y_current + "px",
     });
   }
+
   $(".hoverLayer").hover(
     function () {
       masksize = 150;
@@ -88,4 +89,16 @@ $(function () {
       masksize = 50;
     }
   );
+
+  let Hrart = true;
+  $(".hrart").click(function () {
+    if (Hrart) {
+      $(this).find("img:last-child").css("display", "block");
+      $(this).find("img:first-child").css("display", "none");
+    } else {
+      $(this).find("img:last-child").css("display", "none");
+      $(this).find("img:first-child").css("display", "block");
+    }
+    Hrart = !Hrart;
+  });
 });
