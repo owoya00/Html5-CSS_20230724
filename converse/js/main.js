@@ -27,6 +27,7 @@ $(function () {
       $(".top_btn_on").css("display", "block");
 
       $(".SEARCH_BOX").css("left", "0");
+      $("body").css("overflow", "hidden");
     } else {
       $(".nav").css("top", "75px");
       $(".search").css("width", "250px");
@@ -34,6 +35,7 @@ $(function () {
       $(".search>img").css("display", "block");
       $(".top_btn_on").css("display", "none");
       $(".SEARCH_BOX").css("left", "-100%");
+      $("body").css("overflow", "visible");
     }
     menu = !menu;
   });
