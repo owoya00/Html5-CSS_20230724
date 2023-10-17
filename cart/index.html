@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품목록페이지</title>
+  </head>
+  <body>
+    <a href="cart.html">장바구니 보기</a>
+    <form>
+      <input type="hidden" name="item_key" value="a0001" />
+      <input type="text" name="item" value="아이폰" readonly />
+      <select name="ea">
+        <option value="1">1개</option>
+        <option value="2">2개</option>
+        <option value="3">3개</option>
+        <option value="4">4개</option>
+        <option value="5">5개</option>
+      </select>
+      <input
+        type="button"
+        value="장바구니에 담기"
+        onclick="putCart(this.form)"
+      />
+    </form>
+    <form>
+      <input type="hidden" name="item_key" value="a0002" />
+      <input type="text" name="item" value="아이패드" readonly />
+      <select name="ea">
+        <option value="1">1개</option>
+        <option value="2">2개</option>
+        <option value="3">3개</option>
+        <option value="4">4개</option>
+        <option value="5">5개</option>
+      </select>
+      <input
+        type="button"
+        value="장바구니에 담기"
+        onclick="putCart(this.form)"
+      />
+    </form>
+    <form>
+      <input type="hidden" name="item_key" value="a0003" />
+      <input type="text" name="item" value="에어팟" readonly />
+      <select name="ea">
+        <option value="1">1개</option>
+        <option value="2">2개</option>
+        <option value="3">3개</option>
+        <option value="4">4개</option>
+        <option value="5">5개</option>
+      </select>
+      <input
+        type="button"
+        value="장바구니에 담기"
+        onclick="putCart(this.form)"
+      />
+    </form>
+    <script>
+      function putCart(f) {
+        const value = f.item.value + "|" + f.ea.value;
+        localStorage.setItem(f.item_key.value, value);
+      }
+    </script>
+  </body>
+</html>
